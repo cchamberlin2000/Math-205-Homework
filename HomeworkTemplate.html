@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathjax Demo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'  // Adds hidden MathML for better screen reader support (especially Narrator)
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$', '$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true  // Explicitly enable hidden MathML
+          }
+        };
+        </script>
+    
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        .problem {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+  <main>
+    <h1 style="text-align: left;">Homework 2.1</h1>
+    <p class="directions"><strong>Directions:</strong> Solve for `x`.</p>
+    <ol>
+      <li>Solve the linear equation:  `3x+5=14`</li>
+      <li>Solve the quadratic equation: `654x^2 - 4x - 5 = 0`</li>
+      <li>Solve the trigonometric equation: `sin(x) = 1/2`</li>
+      <li>Evaluate: `int_1^2 x^3 dx`</li>
+      <li>Estimate the relative extrema of the function pictured below:
+        <br>
+        <img src="graph1.png" 
+          alt="Graph for problem 5. How do I create alt text that doesn't give away the answer?" 
+          style="max-width: 300px; display: block; margin-top: 10px;">
+      </li>
+    </ol>
+
+    
+    <style>
+      ol li {
+        margin-bottom: 15px; /* Adds space between list items */
+      }
+    </style>
+
+
+  </main>
+</body>
+</html>
