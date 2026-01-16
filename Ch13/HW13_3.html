@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.3</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.3</h1>
+
+<ol>
+
+  <li>
+    Find the exact value of the length of the curve given by `bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`, `-2 <= t <= 8`.
+  </li>
+
+  <li>
+    Set up the integral that gives the length of the following curve and then approximate that length, accurate to the nearest thousandth, using a calculator: `bb(r)(t) = 2t bb(i) + e^t bb(j) - 3t^2 bb(k)`, `-5 <= t <= 6`.
+  </li>
+
+  <li>
+    Find the arc length function (starting from the point corresponding to `t = 0`) and use it to reparameterize `bb(r)(t)` in terms of arc length.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 5t bb(i) + cos t bb(j) + sint bb(k)`</li>
+      <li>`bb(r)(t) = << 3t , \ 1 + 2t , \ 4-t >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the unit tangent and unit normal vectors (the unit normal vector is defined as `bb(N)(t) = (bb(T)'(t))/(||bb(T)'(t)||)` ):
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`</li>
+      <li>`bb(r)(t) = e^(-t) bb(i) + e^t bb(j) - tsqrt(2) bb(k)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the curvature:
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`</li>
+      <li>`bb(r)(t) = e^t bb(i) + e^(-t) bb(j) - 2t bb(k)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the curvature: `bb(r)(t) = 2t bb(i) + (1 - t^2) bb(j) - 3t bb(k)`.
+  </li>
+
+  <li>
+    Find the curvature of `bb(r)(t) = 2t bb(i) + (1 - t^2) bb(j) - 3t bb(k)` at the point `(2, 0, -3)`.
+  </li>
+
+  <li>
+    Find the curvature of `y = 8x^4 - x`.
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Where does the below curve have greater curvature, point A or point B? Justify your answer.</li>
+      <li>Sketch the Circle of Curvature at point A and use its radius to approximate the curvature of the given curve at point A. Use millimeters as your units, and scale the portion of the 
+       <i>x</i>-axis that is shown to 7.7 mm.</li>
+      <img src="13_3_9pic.svg"
+        alt="A smooth curve that decreases sharply from left to right until it reaches Point A and then increases until just after point B, where the slope is somewhat gentle."
+        style="max-width: 300px; display: block; margin-top: 10px;">
+    </ol>
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

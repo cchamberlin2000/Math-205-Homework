@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.4</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.4</h1>
+
+<ol>
+
+  <li>
+    The picture below shows the path of an object. The object's location is given by the position vector function `bb(r)(t)`, where <em>t</em> is time.
+
+      <img src="13_4_1pic.png"
+        alt="A 2D, first quadrant graph of a smooth curve and three of its position vectors with tails at the origins and tips on the curve, from left to right, labeled r(1), r(1.5), and r(1.9). 
+        The x and y axes include tick marks for the values 1 and 2 to provide scale."
+        style="max-width: 300px; display: block; margin-top: 10px;">
+
+    <ol type="a" class="sublist">
+      <li>Sketch the average velocity vector from time `t = 1` to `t = 1.5`.</li>
+      <li>Sketch the average velocity vector from time `t = 1.5` to `t = 1.9`.</li>
+      <li>Write an expression for the velocity vector `bb(v)(1.5)`.</li>
+      <li>Draw an approximation to the vector `bb(v)(1.5)` and estimate the speed of the particle at `t = 1.5`.</li>
+    </ol>
+  </li>
+
+  <li>
+    Let `bb(r)(t) = 2t bb(i) + (1 - t^2) bb(j)`
+    <ol type="a" class="sublist">
+      <li>Calculate the velocity, acceleration, and speed of an object with position function `bb(r)(t)`.</li>
+      <li>Sketch the object's path and draw the velocity and acceleration vectors for `t = 2`. Place the tails of `bb(v)(2)` and `bb(a)(2)` on the tip of `bb(r)(2)`.</li>
+    </ol>
+  </li>
+
+  <li>
+    Calculate the velocity, acceleration, and speed of an object with the given position function.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = << 3t , \ 1 + 2t , \ 4-t^3 >>`</li>
+      <li>`bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the velocity and position functions corresponding to the acceleration function `bb(a)(t) = bb(j)` with initial conditions `bb(v)(0) = bb(i) + bb(k)` and `bb(r)(0) = bb(j) - bb(k)`.
+  </li>
+
+  <li>
+    Find out when a particle reaches a minimum speed if its path is given by `bb(r)(t) = << 3t^2 , \ 2t , \ 4t^2-t >>` where <em>t</em> is in seconds and distance is measured in centimeters.
+  </li>
+
+  <li>
+    A projectile is fired with an initial speed of 400 meters per second and angle of elevation `60°`.
+    <ol type="a" class="sublist">
+      <li>Find the range of the projectile.</li>
+      <li>Find the maximum height of the projectile.</li>
+      <li>Find the speed of the projectile upon impact.</li>
+    </ol>
+  </li>
+
+  <li>
+    A ball is thrown at an angle of `45°` to the ground. If the ball lands 70 meters away, what was the initial speed of the ball?
+  </li>
+
+  <li>
+    A rifle has a muzzle velocity of 200 meters per second. Find two angles of elevation that can be used to hit a target 900 meters away.
+  </li>
+
+  <li>
+    Find the tangential and normal components of acceleration (use your work from number 4 on homework 13.3):
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`</li>
+      <li>`bb(r)(t) = e^(-t) bb(i) + e^t bb(j) - tsqrt(2) bb(k)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Consider the position function `bb(r)(t) = 2t bb(i) + t^3 bb(j)`. Do the following sketches on the same plane.
+    <ol type="a" class="sublist">
+      <li>Sketch the curve given by `bb(r)(t)`.</li>
+      <li>Sketch the acceleration vector at `t = 1` (make sure its initial point is at `bb(r)(1)`).</li>
+      <li>Sketch the vectors `a_T bb(T)(1)` and `a_N bb(N)(1)` (make sure the initial points are at `bb(r)(1)`).</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the unit tangent, principal unit normal, and binormal vectors of `bb(r)(t) = (1)/(3)t^3 bb(i) - sqrt(2)/2 t^2 bb(j) - t bb(k)` at the point given by `t = 1`. 
+    <br><br>
+    [<strong>Note:</strong> The unit binormal vector is defined as the ` bb(T) xx bb(N)`. Also, remember that the principal unit normal vector is given by `bb(N)(t) = (bb(T)'(t))/(||bb(T)'(t)||)`.]
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.1</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.1</h1>
+
+<ol>
+
+  <li>
+    Find the domain of `bb(r)(t) = << t^2, 5/t, sqrt(2t-1) >>`.
+  </li>
+
+  <li>
+    Evaluate the limits:
+    <ol type="a" class="sublist">
+      <li>`lim_(t -> 0) << sin t, (1-e^t)/t, (2-sqrt(t+4))/(6t) >>`</li>
+      <li>`lim_(t -> oo) (e^(-t) \ bb(i) + arctan t \ bb(j) + (2t^3+t + 1)/(t^2 - 3) bb(k))`</li>
+    </ol>
+  </li>
+
+  <li>
+    Sketch the graph of `bb(r)(t)`. Use arrows to indicate the direction that <em>t</em> increases.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = << t^2, t >>`</li>
+      <li>`bb(r)(t) = 2 cos t \ bb(i) + 3 sin t \ bb(j)`</li>
+      <li>`bb(r)(t) = 2t bb(i) + (1 - t) bb(j) - 3t bb(k)`</li>
+      <li>`bb(r)(t) = << t, 2 sin t, cos t >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    Show that the curve `bb(r)(t) = << cos t sin sqrt t, sin t sin sqrtt, cos sqrt t >>` lies entirely on the unit sphere. The below GeoGebra applet shows a portion of `bb(r)(t)` lying on the unit sphere.
+  </li>
+
+<div id="ggb-element" 
+     role="img"
+     aria-label="Interactive 3D plot of the curve given by r of t lying on the unit sphere, spiraling from the north pole down to the south pole">
+</div>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<script>
+    var params = {
+        "appName": "3d",
+        "material_id": "arhkd5ax",
+        "width": 350,
+        "height": 350,
+        "showToolBar": false,
+        "showMenuBar": false,
+        "showAlgebraInput": false,
+        "showResetIcon": false,
+        "enableShiftDragZoom": true,
+        "appletOnLoad": appletOnLoad
+    };
+
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+    
+    function appletOnLoad() {
+        var app = applet.getAppletObject();
+        app.showMenuBar(false);
+        app.showToolBar(false);
+        
+        // Control zoom
+        app.evalCommand('ZoomOut[2]');
+    }
+</script>
+
+  <li>
+    Find a vector-valued function with first coordinate `x = t^3` and second coordinate `y = t` that lies entirely on the unit sphere.
+  </li>
+
+  <li>
+    Come up with your own vector-valued function, different from those in the two previous problems, that lies entirely on the unit sphere. Be sure to graph your function using 
+    GeoGebra to make sure that it lies on the unit sphere. Use the below link to see how I did it:
+
+    
+  </li>
+  
+<a href="https://www.geogebra.org/3d/arhkd5ax"
+   target="_blank"   rel="noopener"
+   aria-label="Open interactive GeoGebra 3D plot in a new tab"
+   class="ggb-link-button">
+    Open the GeoGebra 3D Plot
+</a>
+
+<style>
+.ggb-link-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #005a9e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.ggb-link-button:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
+}
+.ggb-link-button:hover {
+    background: #004b82;
+}
+</style>
+
+</ol>
+
+
+
+</main>
+</body>
+</html>

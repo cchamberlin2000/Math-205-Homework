@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.2</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.2</h1>
+
+<ol>
+
+  <li>
+    Sketch the given vector-value function, `bb(r)(t)`, in the plane. Then find and sketch the position vectors `bb(r)(t)` and `bb(r)'(t)` for the given value of <em>t</em>.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = << 2 cos t , \ 2 sin t >>`, `t = pi/3`</li>
+      <li>`bb(r)(t) = t^2 bb(i) + t bb(j)`, `t = -2`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find `bb(r)'(t)`:
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + (1 - t) bb(j) - 3t bb(k)`</li>
+      <li>`bb(r)(t) = << t^2 , \ 5/t , \ sqrt(2t-1) >>`</li>
+      <li>`bb(r)(t) = 2t bb(i) + e^(3t) bb(j) - cos^2 t \ bb(k)`</li>
+      <li>`bb(r)(t) = 1/(e^(2t)+1)<< sqrt(2)e^t , e^(2t) , -1 >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the unit tangent vector at the given value of <em>t</em>.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + (1 - t) bb(j) - 3sqrt(t) bb(k)`, `t = 4`</li>
+      <li>`bb(r)(t) = << t , \ 2 sin t , \ 2 cos t >>`, `t = pi/6`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find the parametric equations of the tangent line to `bb(r)(t) = 2t bb(i) + (1 - t) bb(j) - 3sqrt(t) \ bb(k)` at the point `(8, -3, -6)`.
+  </li>
+
+  <li>
+    Give the <em>t</em> intervals on which the given curve is smooth.
+    <ol type="a" class="sublist">
+      <li>`bb(r)(t) = 2t bb(i) + e^(3t) bb(j) - cos^2 t \ bb(k)`</li>
+      <li>`bb(r)(t) = << t^2 , \ 5t^3 , \ t^4 >>`</li>
+      <li>`bb(r)(t) = << t^2 , \ 5/t , \ sqrt(2t-1)  >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    Evaluate the integral:
+    <ol type="a" class="sublist">
+      <li>`int_0^2 (9t^2 bb(i) + 4t bb(j) + 15t^4 bb(k)) dt`</li>
+      <li>`int (2t bb(i) + e^(3t) bb(j) - sin t cos^2 t \ bb(k)) dt`</li>
+    </ol>
+  </li>
+
+  <li>
+    Find `bb(r)(t)` given `bb(r)'(t) = 3t^2 bb(i) + 4t bb(j) + 5t^4 bb(k)` and `bb(r)(0) = bb(k)`.
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>
