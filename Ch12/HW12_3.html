@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.3</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+<script>
+    MathJax = {
+      loader: {
+        load: [
+          'input/asciimath',
+          'output/chtml',
+          'ui/menu',
+          'a11y/assistive-mml'
+        ]
+      },
+      asciimath: {
+        delimiters: [['$$','$$'], ['`','`']]
+      },
+      options: {
+        assistiveMml: true
+      },
+      chtml: {
+        displayAlign: 'left',
+        displayIndent: '0',
+        scale: 1
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            // Add margin to math elements in list items
+            document.querySelectorAll('li mjx-container').forEach(el => {
+              el.style.marginTop = '10px';
+              el.style.display = 'inline-block';
+            });
+          });
+        }
+      }
+    };
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        
+
+    </style>
+
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 12.3</h1>
+
+<ol>
+
+  <li>
+    Use the below picture to write the following as single vectors:
+    <img src="rectangle_vectors12_3.svg"
+             alt="Rectangle ABCD with vertices labeled counterclockwise: A at top-left, B at bottom-left, C at bottom-right, and D at top-right."
+             style="max-width: 300px; display: block; margin-top: 10px;">
+    <ol type="a" class="sublist">
+      <li>`vec(AB) + vec(BC)`</li>
+      <li>`vec(CD) + vec(DA)`</li>
+      <li>`vec(AB) - vec(BC)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Consider the following vectors given in the picture below. Draw the following.
+    <img src="vectors_uv_12_3_2.svg"
+             alt="Two vectors u and v sharing a common starting point, with u extending diagonally upward at approximately 55 degrees and v extending to the right at a shallower angle, 
+             roughly three-quarters the length of u."
+             style="max-width: 200px; display: block; margin-top: 10px;">
+    <ol type="a" class="sublist">
+      <li>`bb(u) + bb(v)`</li>
+      <li>`bb(u) - bb(v)`</li>
+      <li>`2bb(u)`</li>
+      <li>`2bb(u) + bb(v)`</li>
+      <li>`-2bb(u)`</li>
+      <li>`-2bb(u) + bb(v)`</li>
+    </ol>
+  </li>
+
+  <li>
+    Consider the planar points `P(2, 4)`, `Q(-1, 5)`:
+    <ol type="a" class="sublist">
+      <li>Graph the vector `vec(PQ)`.</li>
+      <li>Convert `vec(PQ)` to component form and include this vector on the graph from part (a).</li>
+    </ol>
+  </li>
+
+  <li>
+    Repeat number three for the points `P(1, 2, 4)` and `Q(3, 5, 6)` in `RR^3`.
+  </li>
+
+  <li>
+    Let `bb(u) = << 2, 5, -7 >>` and `bb(v) = << 2, -3, -6 >>`.
+    <ol type="a" class="sublist">
+      <li>Find `bb(u) + bb(v)`, `bb(u) - bb(v)`, `2bb(v)`, `5bb(u) - 2bb(v)`, `||bb(u)||`, and `||bb(v)||`</li>
+      <li>Find the unit vector that has the same direction as <strong>u</strong>.</li>
+      <li>Find the unit vector that has the same direction as <strong>v</strong>.</li>
+      <li>Find a vector of length 5 with the same direction as <strong>v</strong>.</li>
+    </ol>
+  </li>
+
+  <li>
+    Let `bb(u) = - bb(i) -5 bb(j) + 7 bb(k)` and `bb(v) = 6 bb(i) + 4 bb(j) - 3 bb(k)`. Find `bb(u) + bb(v)`, `bb(u) - bb(v)`, `2bb(v)`, `5bb(u) - 2bb(v)` and `||bb(u)||`.
+  </li>
+
+  <li>
+    A plane flies at a constant groundspeed of 400 mph due east and encounters a 50 mph wind from the northwest. Find the airspeed and compass direction that will allow the plane to maintain its ground speed and eastward direction.
+  </li>
+
+  <li>
+    The picture below represents the application of two forces, <strong>u</strong> and <strong>v</strong>, on an object located at point A. If <strong>u</strong> and <strong>v</strong> have magnitudes 12 pounds and 8 pounds, respectively, determine the resultant force, `bb(u) + bb(v)`, along with the magnitude and direction of `bb(u) + bb(v)`.
+    <img src="vectors_forces12_3_8.svg"
+             alt="Point A with two force vectors originating from it: vector u at 60 degrees above the horizontal to the right,
+             and vector v at approximately 30 degrees above the horizontal to the left."
+             style="max-width: 300px; display: block; margin-top: 10px;">
+  </li>
+
+  <li>
+    A matrix is a rectangular array of numbers. We add, subtract, and scalar multiply matrices in the same way we do vectors. Perform the indicated operations on the following matrices:
+    <ol type="a" class="sublist">
+      <li>`[[2, -3, 8], [-5, 1, 0]] + [[-4, 3, 2], [4, 7, 9]]`</li>
+      <li>`[[2, -3, 8], [-5, 1, 0]] - [[-4, 3, -2], [4, 7, 9]]`</li>
+      <li>`3[[2, -3, 8], [-5, 1, 0]]`</li>
+    </ol>
+  </li>
+
+  <li>
+    We usually define matrices using capital letters. Operations are performed in the usual order. Let `A = [[2, -3, 8], [-5, 1, 0]]` and `B = [[-4, 3, 2], [4, 7, 9]]`. Compute `3A - 2B`.
+  </li>
+
+  <li>
+    In a matrix, rows run horizontally and columns run vertically. The order (or dimension) of a matrix is given by the number rows by the number of columns. For example, matrix A from the previous problem has order `2 xx 3`. What is the order of the matrix `C = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]`?
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>
