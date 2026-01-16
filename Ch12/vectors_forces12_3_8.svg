@@ -1,0 +1,36 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="400" height="300" fill="white"/>
+  
+  <!-- Horizontal line -->
+  <line x1="50" y1="180" x2="350" y2="180" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Vector v (45 degrees from horizontal) -->
+  <line x1="200" y1="180" x2="130" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Vector u (60 degrees from horizontal) -->
+  <line x1="200" y1="180" x2="290" y2="50" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Point A -->
+  <circle cx="200" cy="180" r="3" fill="black"/>
+  
+  <!-- Labels -->
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">A</text>
+  <text x="115" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold">v</text>
+  <text x="305" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold">u</text>
+  
+  <!-- Angle labels -->
+  <text x="155" y="175" font-family="Arial, sans-serif" font-size="14">45°</text>
+  <text x="235" y="165" font-family="Arial, sans-serif" font-size="14">60°</text>
+  
+  <!-- Angle arcs -->
+  <path d="M 220 180 A 20 20 0 0 0 214.14 165.86" fill="none" stroke="black" stroke-width="1"/>
+  <path d="M 180 180 A 20 20 0 0 1 185.86 165.86" fill="none" stroke="black" stroke-width="1"/>
+</svg>

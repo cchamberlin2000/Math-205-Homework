@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.2</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework 12.2</h1>
+
+<ol>
+
+  <li>
+    Identify and sketch the graph of the quadric surface.
+    <ol type="a" class="sublist">
+      <li>`x^2/4 + y^2/9 + z^2/16 = 1`</li>
+      <li>`x = y^2 + z^2/4`</li>
+      <li>`z^2 = 1 + x^2/4 + y^2/9`</li>
+      <li>`z^2 = x^2/4 + y^2/9`</li>
+      <li>`z = y^2/16 - x^2/9`</li>
+      <li>`y^2 + z^2/9 - x^2 = 1`</li>
+    </ol>
+  </li>
+
+  <li>
+    Use the method of completing the square to identify the quadric surface represented by the given equation:
+    <ol type="a" class="sublist">
+      <li>`y^2 + z^2 + 4x + 4y - 10z + 29 = 0`</li>
+      <li>`x^2 + y^2 + z^2 - 8x + 4y - 14z = -44`</li>
+    </ol>
+  </li>
+
+  <li>
+    Draw the space region in the first octant bounded by the plane `z = 2 - y`, the cylinder `x = 4 - y^2`, and the three coordinate planes.
+  </li>
+
+  <li>
+    Draw the space region bounded by the surfaces `z = 4 - (x^2 + y^2)` and `z = 0`.
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

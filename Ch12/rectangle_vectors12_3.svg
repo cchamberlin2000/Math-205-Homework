@@ -1,0 +1,19 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="400" height="250" fill="white"/>
+  
+  <!-- Rectangle -->
+  <rect x="80" y="60" width="240" height="130" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- Vertices (small dots) -->
+  <circle cx="80" cy="60" r="4" fill="black"/>
+  <circle cx="320" cy="60" r="4" fill="black"/>
+  <circle cx="320" cy="190" r="4" fill="black"/>
+  <circle cx="80" cy="190" r="4" fill="black"/>
+  
+  <!-- Labels (counterclockwise from A at top-left) -->
+  <text x="80" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">A</text>
+  <text x="80" y="215" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">B</text>
+  <text x="320" y="215" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">C</text>
+  <text x="320" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">D</text>
+</svg>
