@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.2 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework 12.2 - Answers</h1>
+
+<ol>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Ellipsoid<br><img src="12_2_1a.png" width="400" height="400" alt="3D graph showing an ellipsoid centered at the origin with semi-axes of length 2 along the x-axis, 3 along the y-axis, and 4 along the z-axis"></li>
+      <li>Elliptic paraboloid<br><img src="12_2_1b.png" width="400" height="400" alt="3D graph showing an elliptic paraboloid opening along the positive x-axis, with vertex at the origin and circular cross-sections in planes perpendicular to the x-axis"></li>
+      <li>Hyperboloid of two sheets<br><img src="12_2_1c.png" width="400" height="400" alt="3D graph showing a hyperboloid of one sheet with the z-axis as its axis of symmetry, opening upward and downward from a minimum at z = 1 and z = -1"></li>
+      <li>Elliptic cone<br><img src="12_2_1d.png" width="400" height="400" alt="3D graph showing an elliptic cone with vertex at the origin and the z-axis as its axis of symmetry, opening both upward and downward"></li>
+      <li>Hyperbolic paraboloid<br><img src="12_2_1e.png" width="400" height="400" alt="3D graph showing a hyperbolic paraboloid (saddle surface) with vertex at the origin, curving upward along the y-axis and downward along the x-axis"></li>
+      <li>Hyperboloid of one sheet<br><img src="12_2_1f.png" width="400" height="400" alt="3D graph showing a hyperboloid of one sheet with the x-axis as its axis of symmetry, opening along the x-axis with a minimum circular cross-section of radius 1 at x = 0"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`x = -[(y + 2)^2/4 + (z - 5)^2/4]`, Elliptic paraboloid. </li>
+      <li>`(x - 4)^2 + (y + 2)^2 + (z - 7)^2 = 25`, Sphere (or ellipsoid) with center `(4, -2, 7)` and radius `5`</li>
+    </ol>
+  </li>
+
+  <li>
+    <img src="12_2_3.png" alt="3D graph showing the region in the first octant bounded by the plane z = 2 - y (a triangular plane slicing diagonally), the parabolic cylinder x = 4 - y² (opening toward negative x), and the three coordinate planes (xy-plane, xz-plane, and yz-plane), forming a curved wedge-shaped solid">
+  </li>
+
+  <li>
+    <img src="12_2_4.png" alt="3D graph showing the region bounded by the paraboloid z = 4 - (x² + y²) opening downward with vertex at (0, 0, 4) and the xy-plane at z = 0, forming a solid dome or bowl shape with circular base of radius 2 in the xy-plane">
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

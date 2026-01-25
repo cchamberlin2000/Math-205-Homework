@@ -76,8 +76,31 @@
 
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
-        
+        }
+        .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+      }
 
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }
     </style>
 
 </head>
@@ -85,7 +108,7 @@
 <body>
 <main>
 
-<h1>Homework 12.3</h1>
+<h1>Homework Section 12.3</h1>
 
 <ol>
 
@@ -130,11 +153,11 @@
   </li>
 
   <li>
-    Let `bb(u) = << 2, 5, -7 >>` and `bb(v) = << 2, -3, -6 >>`.
+    Let `bb(u) = << -2, 5, -7 >>` and `bb(v) = << 2, -3, -6 >>`.
     <ol type="a" class="sublist">
-      <li>Find `bb(u) + bb(v)`, `bb(u) - bb(v)`, `2bb(v)`, `5bb(u) - 2bb(v)`, `||bb(u)||`, and `||bb(v)||`</li>
-      <li>Find the unit vector that has the same direction as <strong>u</strong>.</li>
-      <li>Find the unit vector that has the same direction as <strong>v</strong>.</li>
+      <li>Find `bb(u) + bb(v)`, `bb(u) - bb(v)`, `2bb(v)`, `5bb(u) - 2bb(v)`, and `||bb(u)||`</li>
+      <li>Find a unit vector that has the same direction as <strong>u</strong>.</li>
+      <li>Find a unit vector that has the same direction as <strong>v</strong>.</li>
       <li>Find a vector of length 5 with the same direction as <strong>v</strong>.</li>
     </ol>
   </li>
@@ -159,7 +182,7 @@
     A matrix is a rectangular array of numbers. We add, subtract, and scalar multiply matrices in the same way we do vectors. Perform the indicated operations on the following matrices:
     <ol type="a" class="sublist">
       <li>`[[2, -3, 8], [-5, 1, 0]] + [[-4, 3, 2], [4, 7, 9]]`</li>
-      <li>`[[2, -3, 8], [-5, 1, 0]] - [[-4, 3, -2], [4, 7, 9]]`</li>
+      <li>`[[2, -3, 8], [-5, 1, 0]] - [[-4, 3, 2], [4, 7, 9]]`</li>
       <li>`3[[2, -3, 8], [-5, 1, 0]]`</li>
     </ol>
   </li>
@@ -173,8 +196,12 @@
   </li>
 
 </ol>
-
+<a href="HW12_3Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
 </main>
 </body>
-
 </html>

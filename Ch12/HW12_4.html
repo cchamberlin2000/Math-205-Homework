@@ -77,18 +77,45 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
-    </style>
+   
+           .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+       }
+
+          /* High-contrast hover and focus states */
+          .homework-button:hover, 
+          .homework-button:focus {
+              background-color: #005a9c;
+              border-color: #003d6b;
+              outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+              outline-offset: 2px;
+          }
+   
+   
+   </style>
 </head>
 
 <body>
 <main>
 
-<h1>Homework 12.4</h1>
+<h1>Homework Section 12.4</h1>
 
 <ol>
 
   <li>
-    Let `bb(u) = << 2, 5, -7 >>` and `bb(v) = << 2, -3, -6 >>`. Find the dot product, `bb(u) cdot bb(v)`.
+    Let `bb(u) = << -2, 5, -7 >>` and `bb(v) = << 2, -3, -6 >>`. Find the dot product, `bb(u) cdot bb(v)`.
   </li>
 
   <li>
@@ -112,7 +139,7 @@
     <ol type="a" class="sublist">
       <li>`bb(u) = << -2, 5, 2 >>` and `bb(v) = << 0, -4, 10 >>`</li>
       <li>`bb(u) = -bb(i) - 5bb(j) + 7bb(k)` and `bb(v) = 6bb(i) + 4bb(j) - 3bb(k)`</li>
-      <li>`bb(u) = -3bb(i) - (2)bb(j) + (3)/(2)bb(k)` and `bb(v) = 6bb(i) + 4bb(j) - 3bb(k)`</li>
+      <li>`bb(u) = -3bb(i) - 2bb(j) + (3)/(2)bb(k)` and `bb(v) = 6bb(i) + 4bb(j) - 3bb(k)`</li>
     </ol>
   </li>
 
@@ -185,9 +212,15 @@
     </ol>
   </li>
 
+  <a href="HW12_4Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+  </a>
+
 </ol>
 
 </main>
 </body>
-
 </html>

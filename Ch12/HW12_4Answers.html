@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.4 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+<script>
+    MathJax = {
+      loader: {
+        load: [
+          'input/asciimath',
+          'output/chtml',
+          'ui/menu',
+          'a11y/assistive-mml'
+        ]
+      },
+      asciimath: {
+        delimiters: [['$$','$$'], ['`','`']]
+      },
+      options: {
+        assistiveMml: true
+      },
+      chtml: {
+        displayAlign: 'left',
+        displayIndent: '0',
+        scale: 1
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            // Add margin to math elements in list items
+            document.querySelectorAll('li mjx-container').forEach(el => {
+              el.style.marginTop = '10px';
+              el.style.display = 'inline-block';
+            });
+          });
+        }
+      }
+    };
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<main>
+
+<h1>Homework 12.4 - Answers</h1>
+
+<ol>
+
+  <li>
+    `23`
+  </li>
+
+  <li>
+    `-47`
+  </li>
+
+  <li>
+    `55/2`
+  </li>
+
+  <li>
+    `68.2°`
+  </li>
+
+  <li>
+    `134.0°`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Orthogonal</li>
+      <li>Neither</li>
+      <li>Parallel</li>
+    </ol>
+  </li>
+
+  <li>
+    `x = 0, 1`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`-1/6(2 bb(i) + bb(j) + bb(k))`</li>
+      <li>`<< 23/49(2, -3, -6) >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    `17` foot-pounds
+  </li>
+
+  <li>
+    `60` joules
+  </li>
+
+  <li>
+    8, 1
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`-2`</li>
+      <li>`2`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`26`</li>
+      <li>`-30`</li>
+    </ol>
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

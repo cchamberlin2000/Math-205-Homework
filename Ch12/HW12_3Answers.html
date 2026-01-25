@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.3 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+<script>
+    MathJax = {
+      loader: {
+        load: [
+          'input/asciimath',
+          'output/chtml',
+          'ui/menu',
+          'a11y/assistive-mml'
+        ]
+      },
+      asciimath: {
+        delimiters: [['$$','$$'], ['`','`']]
+      },
+      options: {
+        assistiveMml: true
+      },
+      chtml: {
+        displayAlign: 'left',
+        displayIndent: '0',
+        scale: 1
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            // Add margin to math elements in list items
+            document.querySelectorAll('li mjx-container').forEach(el => {
+              el.style.marginTop = '10px';
+              el.style.display = 'inline-block';
+            });
+          });
+        }
+      }
+    };
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 12.3 - Answers</h1>
+
+<ol>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`vec(AC)`</li>
+      <li>`vec(CA)`</li>
+      <li>`vec(DB)`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="12_3_2a.png" width="220" height="220" alt="Vector diagram showing vectors u and v positioned tail-to-tip, with the resultant vector u + v drawn from the tail of u to the tip of v"></li>
+      <li><img src="12_3_2b.png" width="220" height="220" alt="Vector diagram showing vector u with vector -v (pointing opposite to v) added to it, with the resultant vector u - v drawn from the tail of u to the head of -v"></li>
+      <li><img src="12_3_2c.png" width="220" height="220" alt="Vector diagram showing vector 2u, which is twice the length of u and points in the same direction as u"></li>
+      <li><img src="12_3_2d.png" width="220" height="220" alt="Vector diagram showing vector 2u and vector v positioned tail-to-tail, with the resultant vector 2u + v drawn from the tail of 2u to the head of v"></li>
+      <li><img src="12_3_2e.png" width="220" height="220" alt="Vector diagram showing vector -2u, which is twice the length of u but points in the opposite direction"></li>
+      <li><img src="12_3_2f.png" width="220" height="220" alt="Vector diagram showing vector -2u and vector v positioned tail-to-tail, with the resultant vector -2u + v drawn from the tail of -2u to the head of v"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="12_3_3a_b.png" width="250" height="220" alt="2D coordinate plane showing point P at (2, 4) and point Q at (-1, 5), with vector PQ drawn as an arrow from P to Q, and "></li>
+     
+    </ol>
+  </li>
+
+  <li>
+    <img src="12_3_4a_b.png" width="220" height="220" alt="3D coordinate system showing point P at (1, 2, 4) and point Q at (3, 5, 6), with vector PQ drawn from P to Q, and the component form vector from the origin with components (2, 3, 2)">
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(u) + bb(v) = << 0, 2, -13 >>`, `bb(u) - bb(v) = << -4, 8, -1 >>`, `2bb(v) = << 4, -6, -12 >>`, `5bb(u) - 2bb(v) = << -14, 31, -23 >>`, `||bb(u)|| = sqrt(78)`</li>
+      <li>`1/sqrt(78)<< -2, 5, -7 >>`</li>
+      <li>`1/7<< 2, -3, -6 >>`</li>
+      <li>`5/7 << 2, -3, -6 >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    `bb(u) + bb(v) = 5 bb(i) - bb(j) + 4 bb(k)`, `bb(u) - bb(v) = -7 bb(i) - 9 bb(j) + 10 bb(k)`, `2bb(v) = 12 bb(i) + 8 bb(j) - 6 bb(k)`, `5bb(u) - 2bb(v) = -17 bb(i) - 33 bb(j) + 41 bb(k)`, `||bb(u)|| = 5sqrt(3)`
+  </li>
+
+  <li>
+    366.35 mph, N84.46°E
+  </li>
+
+  <li>
+    16.05 pounds, 88.78°
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`[[-2, 0, 10], [-1, 8, 9]]`</li>
+      <li>`[[6, -6, 6], [-9, -6, -9]]`</li>
+      <li>`[[6, -9, 24], [-15, 3, 0]]`</li>
+    </ol>
+  </li>
+
+  <li>
+    `[[14, -15, 20], [-23, -11, -18]]`
+  </li>
+
+  <li>
+    `3 xx 4`
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

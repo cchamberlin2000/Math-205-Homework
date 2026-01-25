@@ -62,6 +62,36 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
+
+                /* Add this to create space below the GeoGebra plot */
+        #ggb-wrapper {
+            margin-bottom: 50px; /* Adjust this number for more or less space */
+        }
+
+        .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+}
+
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
@@ -150,8 +180,8 @@
     var params = {
         "appName": "3d",
         "material_id": "dh4g3cyr",
-        "width": 500,
-        "height": 360,
+        "width": 450,
+        "height": 375,
         "showToolBar": false,
         "showMenuBar": false,
         "showAlgebraInput": false,
@@ -171,6 +201,16 @@
         app.showToolBar(false);
     }
 </script>
+        
+
+
+
+<a href="HW12_1Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
 
 </main>
 </body>

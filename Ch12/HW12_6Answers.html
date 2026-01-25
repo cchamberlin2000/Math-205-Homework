@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.6 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+<script>
+    MathJax = {
+      loader: {
+        load: [
+          'input/asciimath',
+          'output/chtml',
+          'ui/menu',
+          'a11y/assistive-mml'
+        ]
+      },
+      asciimath: {
+        delimiters: [['$$','$$'], ['`','`']]
+      },
+      options: {
+        assistiveMml: true
+      },
+      chtml: {
+        displayAlign: 'left',
+        displayIndent: '0',
+        scale: 1
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            // Add margin to math elements in list items
+            document.querySelectorAll('li mjx-container').forEach(el => {
+              el.style.marginTop = '10px';
+              el.style.display = 'inline-block';
+            });
+          });
+        }
+      }
+    };
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<main>
+
+<h1>Homework 12.6 - Answers</h1>
+
+<ol>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`x = 2 + 3t`, `y = 2t`, `z = -5 - t`</li>
+      <li>`x = -1 + 2t`, `y = 3 + 3t`, `z = 2 - 3t`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(r) = 2bb(i) - 5bb(k) + t(3bb(i) + 2bb(j) - bb(k))`</li>
+      <li>`(x + 1)/2 = (y - 3)/3 = (z - 2)/(-3)`</li>
+    </ol>
+  </li>
+
+  <li>
+    `(0, -3/2, 11/2)`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Parallel</li>
+      <li>Skew</li>
+      <li>Intersecting; `(-32, -13, 28)`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`2x - 7y + 3z = -6`</li>
+      <li>`2x + 3y - 3z = -14`</li>
+      <li>`8x + 15y + 7z = 4`</li>
+      <li>`y + z = 4`</li>
+    </ol>
+  </li>
+
+  <li>
+    `(6, 6, -6)`
+  </li>
+
+  <li>
+    `x = t`, `y = (-1 - t)/2`, `z = (1 - 3t)/2`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Parallel</li>
+      <li>Perpendicular</li>
+    </ol>
+  </li>
+
+  <li>
+    About `61.87°`
+  </li>
+
+  <li>
+    `6/sqrt(86)`
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

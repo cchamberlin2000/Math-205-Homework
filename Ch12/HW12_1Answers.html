@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12.1 - Answers</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        /* Image sizing constraint */
+        img {
+            max-width: 400px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+            object-fit: contain;
+        }
+
+        .sublist {
+            margin-top: 20px;
+            list-style-type: none;
+            padding-left: 1.8em;
+        }
+
+        .sublist li {
+            margin-bottom: 14px;
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework 12.1 - Answers</h1>
+
+<ol>
+  <li>
+    <img src="12_1_1.png" alt="3D coordinate system showing the four given points plotted in space">
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="12_1_2a.png" alt="Vertical plane y = 2x + 1"></li>
+      <li><img src="12_1_2b.png" alt="Vertical plane y = 2"></li>
+      <li><img src="12_1_2c.png" alt="Horizontal plane z = 3"></li>
+      <li><img src="12_1_2d.png" alt="Plane 2x + 3y + z = 6"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>The set of all points in space above the horizontal plane `z = 5`.</li>
+      <li>All points between the planes `z = 0` and `z = 5`, including points on `z = 5`.</li>
+      <li>All points outside the sphere of radius 2 centered at the origin.</li>
+    </ol>
+  </li>
+
+  <li>
+    `sqrt(104) = 2sqrt(26)`
+  </li>
+
+  <li>
+    The intersection is a circle in the `xy`-plane given by equations `(y - 6)^2 + (z + 8)^2 = 24` and `x = 0`. The circle has center `(0, 6, -8)` and radius `2sqrt(6)`.
+        
+  </li>
+
+  <li>
+    `(x + 7)^2 + (y + 5)^2 + (z - 2)^2 = 104`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="12_1_7a.png" alt="2D sine curve y = sin x"></li>
+      <li><img src="12_1_7b.png" alt="3D cylindrical surface that is an extension of the 2D curve y = sin x"></li>
+      <li><img src="12_1_7c.png" alt="3D cylindrical surface that is an extension of the 2D curve z = sin x"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="12_1_8a.png" alt="3D cylindrical surface that is an extension of the 2D curve z = e^y"></li>
+      <li><img src="12_1_8b.png" alt="Elliptical cylinder x²/4 + y²/9 = 1"></li>
+    </ol>
+  </li>
+
+  <li>
+    `6x + 2y + 3z = 6`
+  </li>
+</ol>
+
+</main>
+</body>
+</html>
