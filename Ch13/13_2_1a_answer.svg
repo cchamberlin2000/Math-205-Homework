@@ -1,0 +1,57 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="300" fill="white"/>
+  
+  <!-- Coordinate system -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="red"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="blue"/>
+    </marker>
+  </defs>
+  
+  <!-- Axes -->
+  <line x1="150" y1="280" x2="150" y2="20" stroke="gray" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="20" y1="150" x2="280" y2="150" stroke="gray" stroke-width="1" marker-end="url(#arrowhead)"/>
+  
+  <!-- Axis labels -->
+  <text x="285" y="155" font-size="14" fill="black">x</text>
+  <text x="155" y="15" font-size="14" fill="black">y</text>
+  
+  <!-- Circle: r(t) = <2cos(t), 2sin(t)> -->
+  <circle cx="150" cy="150" r="80" fill="none" stroke="lightgray" stroke-width="1.5"/>
+  
+  <!-- Scale: 1 unit = 40 pixels, so radius 2 = 80 pixels -->
+  <!-- At t = π/3: x = 2cos(π/3) = 2(1/2) = 1, y = 2sin(π/3) = 2(√3/2) = √3 ≈ 1.732 -->
+  <!-- Point coordinates: (150 + 40*1, 150 - 40*1.732) = (190, 80.72) -->
+  
+  <!-- Position vector r(π/3) - RED -->
+  <line x1="150" y1="150" x2="190" y2="80.72" stroke="red" stroke-width="2.5" marker-end="url(#arrowhead-red)"/>
+  
+  <!-- Derivative r'(t) = <-2sin(t), 2cos(t)> -->
+  <!-- At t = π/3: r'(π/3) = <-2sin(π/3), 2cos(π/3)> = <-√3, 1> ≈ <-1.732, 1> -->
+  <!-- Tangent vector starting at point (190, 80.72), direction <-1.732, 1> scaled by 40 -->
+  <!-- End point: (190 - 40*1.732, 80.72 - 40*1) = (120.72, 40.72) -->
+  
+  <!-- Tangent vector r'(π/3) - BLUE -->
+  <line x1="190" y1="80.72" x2="120.72" y2="40.72" stroke="blue" stroke-width="2.5" marker-end="url(#arrowhead-blue)"/>
+  
+  <!-- Point at t = π/3 -->
+  <circle cx="190" cy="80.72" r="4" fill="black"/>
+  
+  <!-- Labels -->
+  <text x="185" y="110" font-size="12" fill="red" font-weight="bold">r(π/3)</text>
+  <text x="148" y="55" font-size="12" fill="blue" font-weight="bold">r'(π/3)</text>
+  <text x="195" y="75" font-size="11" fill="black">(1, √3)</text>
+  
+  <!-- Grid marks for scale reference -->
+  <line x1="190" y1="148" x2="190" y2="152" stroke="gray" stroke-width="1"/>
+  <text x="192" y="165" font-size="10" fill="gray">1</text>
+  <line x1="148" y1="110" x2="152" y2="110" stroke="gray" stroke-width="1"/>
+  <text x="120" y="112" font-size="10" fill="gray">1</text>
+</svg>
