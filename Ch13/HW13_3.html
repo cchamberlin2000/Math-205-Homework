@@ -77,6 +77,32 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
+                         .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+      }
+
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }
+
+
     </style>
 </head>
 
@@ -134,14 +160,18 @@
   <li>
     <ol type="a" class="sublist">
       <li>Where does the below curve have greater curvature, point A or point B? Justify your answer.</li>
-      <li>Sketch the Circle of Curvature at point A and use its radius to approximate the curvature of the given curve at point A. Use millimeters as your units, and scale the portion of the 
-       <i>x</i>-axis that is shown to 7.7 mm.</li>
+      <li>Sketch the Circle of Curvature at point B and use its radius to approximate the curvature of the given curve at point A. 
       <img src="13_3_9pic.svg"
         alt="A smooth curve that decreases sharply from left to right until it reaches Point A and then increases until just after point B, where the slope is somewhat gentle."
         style="max-width: 300px; display: block; margin-top: 10px;">
     </ol>
   </li>
-
+<a href="HW13_3Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
 </ol>
 
 </main>

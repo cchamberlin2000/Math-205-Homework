@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.3 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.3 - Answers</h1>
+
+<ol>
+
+  <li>
+    `10sqrt(5)`
+  </li>
+
+  <li>
+    `int_(-5)^6 sqrt(4 + e^(2t) + 36t^2) dt ~~ 506.407`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(r)(s) = (5s)/sqrt(26) bb(i) + cos(s/sqrt(26)) bb(j) + sin(s/sqrt(26)) bb(k)`</li>
+      <li>`bb(r)(s) = << (3s)/sqrt(14), 1 + (2s)/sqrt(14), 4 - s/sqrt(14) >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(T)(t) = 1/sqrt(5)(2bb(i) - sin t bb(j) - cos t bb(k))`, `bb(N)(t) = -cos t bb(j) + sin t bb(k)`</li>
+      <li>`bb(T)(t) = 1/(e^(2t)+1)(- bb(i) + e^(2t) bb(j) - sqrt(2) e^t bb(k))`, `bb(N)(t) = 1/(e^(2t)+1)(sqrt(2)e^t bb(i) + sqrt(2)e^t bb(j) + (e^(2t)-1) bb(k))`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`kappa(t) = 1/5`</li>
+      <li>`kappa(t) = (sqrt(2)e^(2t))/(e^(2t)+1)^2`</li>
+    </ol>
+  </li>
+
+  <li>
+    `kappa(t) = (2sqrt(13))/(4t^2 + 13)^(3/2)`
+  </li>
+
+  <li>
+    `kappa = (2sqrt(13))/17^(3/2)` or `kappa = (2sqrt(13))/(17sqrt(17))`
+  </li>
+
+  <li>
+    `kappa(x) = (96x^2)/(1 + (32x^3 - 1)^2)^(3/2)`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Point A</li>
+      <li>Answers will vary according to screen window size and units used.<br><img src="13_3_9b_pic.svg" width="300" height="300" alt="Graph showing the original curve with a circle drawn tangent to the curve at point A, with the circle's center on the concave side of the curve, representing the circle of curvature (osculating circle) at that point"></li>
+    </ol>
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>
