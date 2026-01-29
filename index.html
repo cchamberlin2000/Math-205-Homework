@@ -46,6 +46,30 @@
             outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
             outline-offset: 2px;
         }
+
+        .Oldhomework-button {
+            display: block; 
+            padding: 14px 20px;
+            background-color: #005a9c;
+            color: #ffffff !important; /* Forces white text for contrast */
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #005a9c;
+            transition: background 0.2s;
+        }
+
+        /* High-contrast hover and focus states */
+        .Oldhomework-button:hover, 
+        .Oldhomework-button:focus {
+            background-color: #333333;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }
+
     </style>
 </head>
 <body>
@@ -55,7 +79,7 @@
         
         <nav aria-label="Homework Assignments">
             <ul class="homework-list" role="list">
-                <li><a href="HW 205 E.htm" class="homework-button"><span>Old Homework Files</span></a></li>
+                <li><a href="HW 205 E.htm" class="Oldhomework-button"><span>Old Homework Files (Low Accessibility)</span></a></li>
                 <li><a href="Ch12/HW12_1copy.html" class="homework-button"><span>Homework 12.1</span></a></li>
                 <li><a href="Ch12/HW12_2.html" class="homework-button"><span>Homework 12.2</span></a></li>
                 <li><a href="Ch12/HW12_3.html" class="homework-button"><span>Homework 12.3</span></a></li>
