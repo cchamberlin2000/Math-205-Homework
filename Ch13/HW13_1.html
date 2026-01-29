@@ -77,6 +77,32 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
+
+                   .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+      }
+
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        } 
+
     </style>
 </head>
 
@@ -165,7 +191,7 @@
    class="ggb-link-button">
     Open the GeoGebra 3D Plot
 </a>
-
+<br><br>
 <style>
 .ggb-link-button {
     display: inline-block;
@@ -183,7 +209,18 @@
 .ggb-link-button:hover {
     background: #004b82;
 }
+
+
 </style>
+
+<a href="HW13_1Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
+
+
 
 </ol>
 

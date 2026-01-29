@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.1 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+<script>
+    MathJax = {
+      loader: {
+        load: [
+          'input/asciimath',
+          'output/chtml',
+          'ui/menu',
+          'a11y/assistive-mml'
+        ]
+      },
+      asciimath: {
+        delimiters: [['$$','$$'], ['`','`']]
+      },
+      options: {
+        assistiveMml: true
+      },
+      chtml: {
+        displayAlign: 'left',
+        displayIndent: '0',
+        scale: 1
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            // Add margin to math elements in list items
+            document.querySelectorAll('li mjx-container').forEach(el => {
+              el.style.marginTop = '10px';
+              el.style.display = 'inline-block';
+            });
+          });
+        }
+      }
+    };
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.1 - Answers</h1>
+
+<ol>
+
+  <li>
+    `[1/2, oo)`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`<< 0, -1, -1/24 >>`</li>
+      <li>`<< 0, pi/2, 2 >>`</li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li><img src="13_1_3a.png" width="250" height="250" alt="2D parametric curve showing a parabola r(t) = (t, t²) in the xy-plane, traced clockwise for increasing values of t, from the fourth quadrant to (0, 0) and into the first quadrant."></li>
+      <li><img src="13_1_3b.png" width="250" height="250" alt="2D parametric curve showing that r(t) is an ellipse traced out counter-clockwise as t increases. It is centered at the origin with major axis of length 6 along the y-axis and minor axis of length 4 along the x-axis."></li>
+      <li><img src="13_1_3c.png" width="250" height="250" alt="A line in space such that as t increases, it goes from the second octant downward toward the y-axis, intersecting the y-axis at (0,1,0), and continuing downward below the first octant."></li>
+      <li><img src="13_1_3d.png" width="250" height="300" alt="3D parametric curve showing a helical path with central axis the x-axis. As t increases, x-values on the curve get larger."></li>
+    </ol>
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>

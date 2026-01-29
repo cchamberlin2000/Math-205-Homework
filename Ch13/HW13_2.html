@@ -77,6 +77,32 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
+
+                         .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+      }
+
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }   
+
     </style>
 </head>
 
@@ -137,7 +163,12 @@
   <li>
     Find `bb(r)(t)` given `bb(r)'(t) = 3t^2 bb(i) + 4t bb(j) + 5t^4 bb(k)` and `bb(r)(0) = bb(k)`.
   </li>
-
+<a href="HW13_2Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
 </ol>
 
 </main>
