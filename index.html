@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework Portal</title>
+
+    <script>
+        (function() {
+            // Change this specific string (e.g., v13 to v14) to force a refresh
+            const STORAGE_KEY = 'index_v2'; 
+
+            if (!localStorage.getItem(STORAGE_KEY)) {
+                // Clear old keys to keep the student's storage clean
+                localStorage.clear(); 
+                // Set the new key so it doesn't loop
+                localStorage.setItem(STORAGE_KEY, 'true');
+                // Force reload from server
+                window.location.reload(true);
+            }
+        })();
+    </script>
+
     <style>
         body {
             font-family: sans-serif;
@@ -21,14 +38,11 @@
             margin-bottom: 12px;
         }
 
-        /* Making the <a> tag a block ensures the 'Link' role 
-           covers the entire gray area, not just the text.
-        */
         .homework-button {
             display: block; 
             padding: 14px 20px;
             background-color: #333333;
-            color: #ffffff !important; /* Forces white text for contrast */
+            color: #ffffff !important;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
@@ -38,12 +52,11 @@
             transition: background 0.2s;
         }
 
-        /* High-contrast hover and focus states */
         .homework-button:hover, 
         .homework-button:focus {
             background-color: #005a9c;
             border-color: #003d6b;
-            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline: 3px solid #ffbf47;
             outline-offset: 2px;
         }
 
@@ -51,7 +64,7 @@
             display: block; 
             padding: 14px 20px;
             background-color: #005a9c;
-            color: #ffffff !important; /* Forces white text for contrast */
+            color: #ffffff !important;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
@@ -61,15 +74,13 @@
             transition: background 0.2s;
         }
 
-        /* High-contrast hover and focus states */
         .Oldhomework-button:hover, 
         .Oldhomework-button:focus {
             background-color: #333333;
             border-color: #003d6b;
-            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline: 3px solid #ffbf47;
             outline-offset: 2px;
         }
-
     </style>
 </head>
 <body>
@@ -99,5 +110,3 @@
 
 </body>
 </html>
-
-
