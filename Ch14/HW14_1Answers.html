@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.1 - Answers (Accessible Navigation)</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 1000px; color: #333; }
+        
+        /* Focus Highlighting */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        /* Style for the Question Number Headers */
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 20px;
+            counter-increment: subitem;
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ")";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .answer-content { flex-grow: 1; }
+        
+        img { display: block; margin-top: 15px; border: 1px solid #ccc; max-width: 100%; height: auto; }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Homework Section 14.1 - Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a">
+                    <div class="answer-content">`f(85, 30) = 84`. This means that when the actual temperature is 85°F and the relative humidity is 30%, the perceived temperature is 84°F.</div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part b">
+                    <div class="answer-content">`T = 95`°F</div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part c">
+                    <div class="answer-content">`f(T, 50)` represents the perceived temperature as a function of just a single variable, the actual temperature T, when the relative humidity is held constant at 50%.</div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part d">
+                    <div class="answer-content">As the humidity increases, the perceived temperature `f(85, h)` increases.</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a">
+                    <div class="answer-content">`f(3, -4) = ln(9 + 64 - 16) = ln(57)`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part b">
+                    <div class="answer-content">
+                        `D: {(x,y)| x^2/16 + y^2/4 > 1}`. That is, the domain is the exterior region of the ellipse defined by the inequality `x^2/16 + y^2/4 > 1`.
+                        <img src="14_1_2bans.png" alt="2D graph showing a dashed ellipse with the area outside it shaded.">
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part c">
+                    <div class="answer-content">Range: `(-oo, oo)` or all real numbers.</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3">
+                <div class="answer-content">
+                    `D: {(x,y)| x != +-1}`. That is, the domain is the entire xy-plane except for the vertical lines at `x = 1` and `x = -1`.
+                    <img src="14_1_3ans.png" alt="2D graph of the plane with vertical dashed lines at x equals 1 and x equals negative 1.">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 4, part a">
+                    <div class="answer-content">`f(1, 2, 5) = e^0 = 1`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 4, part b">
+                    <div class="answer-content">
+                        `D: {(x,y)| z >= x^2 + y^2}`.
+                        <img src="14_1_4bans.png" alt="3D graph of a paraboloid with the region inside/above the surface shaded.">
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 4, part c">
+                    <div class="answer-content">Range: `[1, oo)`</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 5</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 5, part a"><div class="answer-content">Elliptic paraboloid. <img src="14_1_5aAns.png" alt="3D graph of an elliptic paraboloid."></div></li>
+                <li tabindex="0" aria-label="Question 5, part b"><div class="answer-content">Plane. <img src="14_1_5bAns.png" alt="3D graph of a plane."></div></li>
+                <li tabindex="0" aria-label="Question 5, part c"><div class="answer-content">Cylindrical surface. <img src="14_1_5cAns.png" alt="3D graph of a sine wave cylindrical surface."></div></li>
+                <li tabindex="0" aria-label="Question 5, part d"><div class="answer-content">Upper half of an ellipsoid. <img src="14_1_5dAns.png" alt="3D graph of a dome ellipsoid."></div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 6</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 6, part a"><div class="answer-content">III</div></li>
+                <li tabindex="0" aria-label="Question 6, part b"><div class="answer-content">I</div></li>
+                <li tabindex="0" aria-label="Question 6, part c"><div class="answer-content">IV</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 7</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 7, part a"><div class="answer-content">Answers will vary but should be hyperbolas in the xy-plane.</div></li>
+                <li tabindex="0" aria-label="Question 7, part b"><div class="answer-content">Answers will vary but should be vertical shifts of the graph of `y = -ln(x)`.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 8</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 8">
+                <div class="answer-content">The set of level curves in part (a) represents those of an elliptic paraboloid.</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 9</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 9">
+                <div class="answer-content">
+                    Set `f(x,y,z)=1` to get a hyperboloid of one sheet: `x^2 + y^2 - z^2 = 1`.
+                    <img src="14_1_9Ans.png" alt="3D graph showing a hyperboloid of one sheet.">
+                </div>
+            </div>
+        </li>
+    </ol>
+</main>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.3 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 14.3">
+    <h1 tabindex="0">Homework Section 14.3</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                Find the first partial derivatives of the given function.
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a"><div class="content-wrapper">`f(x,y)=4x^2-y^4`</div></li>
+                <li tabindex="0" aria-label="Question 1, part b"><div class="content-wrapper">`z=xe^(5y)`</div></li>
+                <li tabindex="0" aria-label="Question 1, part c"><div class="content-wrapper">`g(x,y)=3x^y`</div></li>
+                <li tabindex="0" aria-label="Question 1, part d"><div class="content-wrapper">`f(m,n)=m ln(m+n^2)`</div></li>
+                <li tabindex="0" aria-label="Question 1, part e"><div class="content-wrapper">`f(x,y,z)=xy^2z^3+2yz`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Find the first partial derivative of the given function and evaluate it as indicated:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`f(x,y)=sqrt(x^2+y^2)`; find `f_x(5,12)`</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`f(x,y)=cos(x-2y)`; find `f_y(pi, pi/4)`</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`f(x,y,z)=(2x)/(y+z)`; find `f_z(1,3,2)`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3">
+                <div class="content-wrapper">
+                    Find `(del z)/(del x)` and `(del z)/(del y)` using implicit differentiation: `sin(xyz)=x+3y+2z`.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 4">
+                <div class="content-wrapper">Find the four second partials of `f(x,y)=x^3y^2-2xy^4`.</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 5 introduction">
+                Find the indicated partial derivative(s) of the given function:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 5, part a"><div class="content-wrapper">`f(x,y)=2xy^4+x^3y^2`; find `f_(yx x)`</div></li>
+                <li tabindex="0" aria-label="Question 5, part b">
+                    <div class="content-wrapper">
+                        `w=x/(2y+z)`; find `(del^3 w)/(del x^2 del y)` and `(del^3 w)/(del z del y del x)`
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 6</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 6 introduction">
+                Let blood alcohol percentage values, `f(w,d)`, be given in the body of the following chart, where `w` stands for body weight in pounds and `d` stands for drinks consumed in less than 1 hour.
+
+                <table>
+                    <caption>Table 1: Blood Alcohol Percentage Based on Body Weight and Number of Drinks</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Body Weight</th>
+                            <th colspan="7" scope="colgroup">Number of Drinks</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th scope="col">1</th><th scope="col">2</th><th scope="col">3</th>
+                            <th scope="col">4</th><th scope="col">5</th><th scope="col">6</th>
+                            <th scope="col">7</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">120 lb.</th><td>0.031</td><td>0.063</td><td>0.094</td><td>0.125</td><td>0.156</td><td>0.188</td><td>0.219</td></tr>
+                        <tr><th scope="row">130 lb.</th><td>0.029</td><td>0.058</td><td>0.087</td><td>0.116</td><td>0.145</td><td>0.174</td><td>0.203</td></tr>
+                        <tr><th scope="row">140 lb.</th><td>0.027</td><td>0.054</td><td>0.08</td><td>0.107</td><td>0.134</td><td>0.161</td><td>0.188</td></tr>
+                        <tr><th scope="row">150 lb.</th><td>0.025</td><td>0.05</td><td>0.075</td><td>0.1</td><td>0.125</td><td>0.151</td><td>0.176</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 6, part a"><div class="content-wrapper">Estimate `f_d(140,3)` using the table.</div></li>
+                <li tabindex="0" aria-label="Question 6, part b"><div class="content-wrapper">What are the units of `f_d(140,3)`?</div></li>
+                <li tabindex="0" aria-label="Question 6, part c"><div class="content-wrapper">Interpret the meaning of your estimate for `f_d(140,3)`.</div></li>
+            </ul>
+        </li>
+    </ol>
+
+    <a href="HW14_3Ans.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 14.3 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>

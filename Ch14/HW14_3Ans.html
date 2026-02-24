@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.3 Answers - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+        .answer-text { font-weight: bold; color: #000; }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 14.3">
+    <h1 tabindex="0">Homework Section 14.3 Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Answer 1</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 1, part a"><div class="content-wrapper answer-text">`f_x = 8x`, `f_y = -4y^3`</div></li>
+                <li tabindex="0" aria-label="Answer 1, part b"><div class="content-wrapper answer-text">`z_x = e^(5y)`, `z_y = 5xe^(5y)`</div></li>
+                <li tabindex="0" aria-label="Answer 1, part c"><div class="content-wrapper answer-text">`g_x = 3yx^(y-1)`, `g_y = 3x^y ln x`</div></li>
+                <li tabindex="0" aria-label="Answer 1, part d"><div class="content-wrapper answer-text">`f_m = m/(m+n^2) + ln(m+n^2)`, `f_n = (2mn)/(m+n^2)`</div></li>
+                <li tabindex="0" aria-label="Answer 1, part e"><div class="content-wrapper answer-text">`f_x = y^2z^3`, `f_y = 2xyz^3 + 2z`, `f_z = 3xy^2z^2 + 2y`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 2, part a"><div class="content-wrapper answer-text">`5/13`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part b"><div class="content-wrapper answer-text">`2`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part c"><div class="content-wrapper answer-text">`-2/25`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 3">
+                <div class="content-wrapper answer-text">
+                    `(del z)/(del x) = (1 - yz cos(xyz))/(xy cos(xyz) - 2)`, `(del z)/(del y) = (3 - xz cos(xyz))/(xy cos(xyz) - 2)`
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 4">
+                <div class="content-wrapper answer-text">
+                    `f_(x x) = 6xy^2`, `f_(yy) = 2x^3 - 24xy^2`, `f_(xy) = 6x^2y - 8y^3`, `f_(yx) = 6x^2y - 8y^3`
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 5</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 5, part a">
+                    <div class="content-wrapper answer-text">`f_(yx x) = 12xy`</div>
+                </li>
+                <li tabindex="0" aria-label="Answer 5, part b">
+                    <div class="content-wrapper answer-text">
+                        `(del^3 w)/(del x^2 del y) = 0`, `(del^3 w)/(del z del y del x) = 4/(2y+z)^3`
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 6</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 6, part a"><div class="content-wrapper answer-text">`0.0265`</div></li>
+                <li tabindex="0" aria-label="Answer 6, part b"><div class="content-wrapper answer-text">percentage per drink</div></li>
+                <li tabindex="0" aria-label="Answer 6, part c">
+                    <div class="content-wrapper answer-text">
+                        For a 140 lb person who has consumed 3 drinks, the blood alcohol content increases by approximately 0.0265% for each additional drink.
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</main>
+</body>
+</html>
