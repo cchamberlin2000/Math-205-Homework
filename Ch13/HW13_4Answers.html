@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13.4 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js">
+    </script>
+
+    <script>
+        MathJax = {
+          loader: {
+            load: [
+              'input/asciimath',
+              'output/chtml',
+              'ui/menu',
+              'a11y/assistive-mml'
+            ]
+          },
+          asciimath: {
+            delimiters: [['$$','$$'], ['`','`']]
+          },
+          options: {
+            assistiveMml: true
+          },
+          chtml: {
+            displayAlign: 'left',
+            displayIndent: '0',
+            scale: 1
+          },
+          startup: {
+            pageReady: () => {
+              return MathJax.startup.defaultPageReady().then(() => {
+                // Add margin to math elements in list items
+                document.querySelectorAll('li mjx-container').forEach(el => {
+                  el.style.marginTop = '10px';
+                  el.style.display = 'inline-block';
+                });
+              });
+            }
+          }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+        .directions {
+            margin-bottom: 20px;
+        }
+        ol li {
+            margin-bottom: 20px;
+        }
+
+        .sublist {
+            margin-top: 20px;   /* space between the numbered item and the first lettered item */
+        }
+
+        .sublist li {
+            margin-bottom: 14px; /* space between a), b), c), etc. */
+            
+        }
+
+        .sublist {
+            list-style-type: none;   /* remove default a. b. c. */
+            padding-left: 1.8em;     /* keep indentation */
+        }
+
+        .sublist li::marker {
+            content: counter(list-item, lower-alpha) ")   "; 
+        }
+
+        ol > li > img {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<h1>Homework Section 13.4 - Answers</h1>
+
+<ol>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>The average velocity vector is `2[bb(r)(1.5) - bb(r)(1)]` with its tail at the tip of `bb(r)(1)` in the below picture.</li>
+      <li>The average velocity vector is `2.5[bb(r)(1.9) - bb(r)(1.5)]` with its tail at the tip of `bb(r)(1.5)` in the below picture.<br>
+      <img src="13_4_1ANS_parts_a_and_b_pic.png" width="400" height="300" alt="2D first quadrant graph showing the original curve with position vectors r(1), r(1.5), and r(1.9), along with two average velocity vectors: one starting at the tip of r(1) pointing toward r(1.5), and another starting at the tip of r(1.5) pointing toward r(1.9)"></li>
+      <li>`bb(v)(1.5) = lim_(h->0) (bb(r)(1.5+h) - bb(r)(1.5))/h`</li>
+      <li>Estimate the length of `bb(v)(1.5)` to be the average of the lengths of the two average velocity vectors from parts (a) and (b) according to the scale of the picture. Answers will vary a lot, but the speed should be just over 3.0 units/time (in terms of 1 unit on the x or y-axis).<br>
+        
+        
+        <img src="13_4_1_part_b_pic.png" width="400" height="300" alt="2D first quadrant graph showing the original curve with position vector r(1.5) and the velocity vector v(1.5) drawn tangent to the curve at the tip of r(1.5), pointing in the direction of motion"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(v)(t) = 2bb(i) - 2t bb(j)`, `bb(a)(t) = -2bb(j)`, Speed: `||bb(v)(t)|| = 2sqrt(1 + t^2)`</li>
+      <li><img src="13_4_2b_pic.png" width="350" height="300" alt="2D graph showing a parabola opening downward (path of r(t) = 2ti + (1-t²)j), with velocity vector v(2) = 2i - 4j drawn from the tip of r(2), and acceleration vector a(2) = -2j drawn downward from the tip of r(2)"></li>
+    </ol>
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`bb(v)(t) = << 6t, 2, -3t^2 >>`, `bb(a)(t) = << 6, 0, -6t >>`, Speed: `sqrt(9t^4+36t^2+4)`</li>
+      <li>`bb(v)(t) = 2bb(i) - sin t bb(j) - cos t bb(k)`, `bb(a)(t) = -cos t bb(j) + sin t bb(k)`, Speed: `sqrt(5)`</li>
+    </ol>
+  </li>
+
+  <li>
+    `bb(r)(t) = t bb(i) + (t^2/2 + 1) bb(j) + (t - 1) bb(k)`
+  </li>
+
+  <li>
+    `t = 2/25` of a second
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>Range: `14139.7` meters</li>
+      <li>Maximum height: `6122.4` meters</li>
+      <li>Speed upon impact: `400` m/s</li>
+    </ol>
+  </li>
+
+  <li>
+    `v_0 ~~ 26.2` m/s
+  </li>
+
+  <li>
+    Approximately `6.369°` and `83.631°`
+  </li>
+
+  <li>
+    <ol type="a" class="sublist">
+      <li>`a_T = 0`, `a_N = 1`</li>
+      <li>`a_T = 1/(e^(2t)+1)(-e^(-t)+e^(3t)))`, `a_N = (sqrt(2))/(e^(2t)+1)(1+e^(2t))`</li>
+    </ol>
+  </li>
+
+  <li>
+
+    `a_T(1) = 18/13(2 bb(i) + 3 bb(j))`, `a_N(1) = 12/13 (-3 bb(i) + 2 bb(j))`<br>
+    <img src="13_4_10_pic.png" width="350" height="300" alt="2D graph showing a cubic curve (path of r(t) = 2ti + t³j), with position vector r(1) at point (2, 1), acceleration vector a(1) = 6j drawn upward from r(1), and two component vectors: tangential component aₜT(1) along the tangent direction and normal component aₙN(1) perpendicular to the curve">
+  </li>
+
+  <li>
+    `bb(T)(1) = 1/2 (bb(i) - sqrt(2) bb(j) - bb(k))`, `bb(N)(1) = sqrt(2)/2 (bb(i) + bb(k))`, `bb(B)(1) = -1/2 bb(i) - sqrt(2)/2 bb(j) + 1/2 bb(k)`
+  </li>
+
+</ol>
+
+</main>
+</body>
+</html>
