@@ -77,6 +77,32 @@
         .sublist li::marker {
             content: counter(list-item, lower-alpha) ")   "; 
         }
+
+                         .homework-button {
+            display: inline-block; /* Changed from block to inline-block */
+            min-width: 200px;      /* Optional: ensures it's not too small */
+            max-width: 300px;      /* Limits the total width */
+            padding: 14px 20px;
+            background-color: #333333;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #333333;
+            transition: background 0.2s;
+      }
+
+        /* High-contrast hover and focus states */
+        .homework-button:hover, 
+        .homework-button:focus {
+            background-color: #005a9c;
+            border-color: #003d6b;
+            outline: 3px solid #ffbf47; /* Bright gold outline for focus visibility */
+            outline-offset: 2px;
+        }
+
     </style>
 </head>
 
@@ -114,7 +140,7 @@
   <li>
     Calculate the velocity, acceleration, and speed of an object with the given position function.
     <ol type="a" class="sublist">
-      <li>`bb(r)(t) = << 3t , \ 1 + 2t , \ 4-t^3 >>`</li>
+      <li>`bb(r)(t) = << 3t^2 , \ 1 + 2t , \ 4-t^3 >>`</li>
       <li>`bb(r)(t) = 2t bb(i) + cos t bb(j) - sin t bb(k)`</li>
     </ol>
   </li>
@@ -128,7 +154,7 @@
   </li>
 
   <li>
-    A projectile is fired with an initial speed of 400 meters per second and angle of elevation `60°`.
+    A projectile is fired with an initial speed of 400 meters per second and angle of elevation `60°`. For numbers 6 through 8, you may assume that the initial height is 0.
     <ol type="a" class="sublist">
       <li>Find the range of the projectile.</li>
       <li>Find the maximum height of the projectile.</li>
@@ -166,7 +192,12 @@
     <br><br>
     [<strong>Note:</strong> The unit binormal vector is defined as the ` bb(T) xx bb(N)`. Also, remember that the principal unit normal vector is given by `bb(N)(t) = (bb(T)'(t))/(||bb(T)'(t)||)`.]
   </li>
-
+<a href="HW13_4Answers.html"
+   target="_blank"   rel="noopener"
+   aria-label="Link to answers in a new tab"
+   class="homework-button">
+    Answers
+</a>
 </ol>
 
 </main>
