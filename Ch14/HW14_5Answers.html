@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.5 Answers - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+        .answer-text { font-weight: bold; color: #000; }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 14.5">
+    <h1 tabindex="0">Homework Section 14.5 Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Answer 1</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 1, part a">
+                    <div class="content-wrapper answer-text">
+                        `(dz)/(dt) = (y^2 - 2xy)(3t^2) -2t(2xy - x^2)`
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 1, part b">
+                    <div class="content-wrapper answer-text">
+                        `(dz)/(dt) = (-2y)/(2x+y)sin t + [ln(2x+y) + y/(2x+y)]cos t`
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 2, part a">
+                    <div class="content-wrapper answer-text">
+                        `(del z)/(del s) = -e^t/s^2`, <br><br>
+                        `(del z)/(del t) = e^t/s + 2e^(2t)`
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 2, part b">
+                    <div class="content-wrapper answer-text">
+                        `(del z)/(del s) = te^r sin theta + s/sqrt(s^2+t^2) e^r cos theta`, <br><br>
+                        `(del z)/(del t) = se^r sin theta + t/sqrt(s^2+t^2) e^r cos theta`
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 3">
+                <div class="content-wrapper answer-text">
+                    `(del z)/(del v) = -sin(u^2+v) sin(u^2-v^2) - 2v cos(u^2+v) cos(u^2-v^2)`
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 4">
+                <div class="content-wrapper answer-text">
+                    `(del z)/(del u) = 252`, `(del z)/(del v) = 252`, `(del z)/(del w) = 48`
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 5">
+                <div class="content-wrapper answer-text">
+                    `(del z)/(del x) = 28/19`, `(del z)/(del y) = 28/19`
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 6</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 6">
+                <div class="content-wrapper answer-text">
+                    `(dV)/(dt) = (16720 pi)/3` in³/sec
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 7</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 7">
+                <div class="content-wrapper answer-text">
+                    `(dI)/(dt) = -0.0015 text( amp/sec)`. So the current is decreasing at a rate of 0.0015 amps per second.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 8</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 8, part a">
+                    <div class="content-wrapper answer-text">
+                        `(del z)/(del x) = (4yz - 3x^2)/(2z - 4xy)`, <br><br>
+                        `(del z)/(del y) = (2xz - 2y)/(z - 2xy)`
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 8, part b">
+                    <div class="content-wrapper answer-text">
+                        `(del z)/(del x) = (cos(x+y+z) - yz)/(xy - cos(x+y+z))`, <br><br>
+                        `(del z)/(del y) = (cos(x+y+z) - xz)/(xy - cos(x+y+z))`
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</main>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.5 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        .note-box {
+            background-color: #fff9c4;
+            padding: 15px;
+            border-left: 5px solid #fbc02d;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 14.5">
+    <h1 tabindex="0">Homework Section 14.5</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0">
+                Use the Chain Rule to find `(dz)/(dt)`:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a">
+                    <div class="content-wrapper">`z=xy^{2}-x^{2}y`, `x=2+t^{3}`, `y=1-t^{2}`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part b">
+                    <div class="content-wrapper">`z=y ln(2x+y)`, `x=cos t`, `y=sin t`</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0">
+                Use the Chain Rule to find `(del z)/(del s)` and `(del z)/(del t)`:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a">
+                    <div class="content-wrapper">`z=y/x`, `x=se^{-t}`, `y=1+se^{t}`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part b">
+                    <div class="content-wrapper">`z=e^{r}sin theta`, `r=st`, `theta=sqrt(s^{2}+t^{2})`</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    Use the Chain Rule to find `(del z)/(del v)` for `z=cos x sin y`, `x=u^{2}+v` and `y=u^{2}-v^{2}`. Write your answer as a function of `u` and `v`.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    Let `z=x^{3}+xy^{2}`, `x=uv^{2}+w^{3}`, and `y=u+ve^{w}`. Use the Chain Rule to find `(del z)/(del u)`, `(del z)/(del v)` and `(del z)/(del w)` when `u=1`, `v=2`, `w=0`.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 5</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    Let `z=ln(u^{2}+v^{2}+w^{2})`, `u=2x+y`, `v=x-2y`, and `w=3xy`. Use the Chain Rule to find `(del z)/(del x)` and `(del z)/(del y)` when `x=y=1`.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 6</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    The radius of a right circular cone is increasing at a rate of 1.6 in/s while its height is decreasing at a rate of 2.4 in/s. At what rate is the volume of the cone changing when the radius is 110 inches and the height is 130 inches.?
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 7</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    According to Ohm's law, `I=V/R` where `I` stands for current (in amps) in an electrical circuit, `V` is voltage, and `R` is resistance (in ohms). As time `t` (in seconds) increases, the voltage decreases while the resistance increases due to rising temperature. Find the rate of change of the current with respect to time when `R =` 100 ohms, `(dR)/(dt)=0.5` ohms/sec, `I=0.1` amp, and `(dV)/(dt)=-0.1` volt/sec.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 8</span>
+            <div style="padding: 10px;" tabindex="0">
+                Use an implicit differentiation formula to find `(del z)/(del x)` and `(del z)/(del y)`:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 8, part a">
+                    <div class="content-wrapper">`x^{3}+y^{2}+z^{2}=4xyz`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 8, part b">
+                    <div class="content-wrapper">`xyz=sin(x+y+z)`</div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <a href="HW14_5Answers.html" class="homework-button">View Answers</a>
+</main>
+</body>
+</html>
