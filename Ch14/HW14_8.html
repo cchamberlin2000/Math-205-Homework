@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14.8 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 14.8">
+    <h1 tabindex="0">Homework Section 14.8</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0">
+                Use Lagrange Multipliers to find the extreme values of the function under the given constraint(s). 
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a">
+                    <div class="content-wrapper">`f(x,y)=y^2-x^2`; &nbsp;&nbsp; `x^2+y^2=1`</div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part b">
+                    <div class="content-wrapper">`f(x,y)=xy^2`;&nbsp;&nbsp; `2x^2+y^2=6` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part c">
+                    <div class="content-wrapper">`f(x,y,z)=2x+6y+14z`;&nbsp;&nbsp; `x^2+y^2+z^2=59` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part d">
+                    <div class="content-wrapper">`f(x,y,z)=xyz`; &nbsp;&nbsp;`3x^2+y^2+4z^2=9` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part e">
+                    <div class="content-wrapper">`f(x,y,z)=x^4+y^4+z^4`; &nbsp;&nbsp;`x^2+y^2+z^2=12` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part f">
+                    <div class="content-wrapper">`f(x,y,z)=x^2+y^2+z^2`;&nbsp;&nbsp; `y-z=1`, `x^2+y^2=1` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part g">
+                    <div class="content-wrapper">`f(x,y,z)=2x+y+z`; &nbsp;&nbsp;`x+y-z=2`, `x^2+z^2=5`</div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    Find the absolute extrema of `f(x,y)=e^(xy)` on the set `R={(x,y) | 9x^2+y^2<=1}`. Use Lagrange Multipliers on the boundary and the method of section 14.7 on the interior.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    Use Lagrange Multipliers to locate the points on the surface `y^2=xz+2` that are closest to the origin. 
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0">
+                <div class="content-wrapper">
+                    To hold all your math awards, you need a cardboard box with volume of 28,000 cubic centimeters and no lid. But cardboard is expensive, and you're not made of money, so you decide to use as little cardboard as possible. Use Lagrange Multipliers to find the dimensions that minimize the amount of cardboard used. 
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW14_8Answers.html" class="homework-button">View Answers</a>
+</main>
+</body>
+</html>
