@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 15.3 - Answers</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 15.3">
+    <h1 tabindex="0">Homework Section 15.3 - Answers Key</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                Evaluate the following iterated integrals. 
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a">
+                    <div class="content-wrapper">
+                        <div>`int_1^2 int_y^2 8xy dx dy`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `9`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part b">
+                    <div class="content-wrapper">
+                        <div>`int_0^(pi/3) int_0^(sin theta) cos theta dr d theta`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `3/8`</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Evaluate the following double integrals. 
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a">
+                    <div class="content-wrapper">
+                        <div>`int int_R y/(x^3+1) dA`, `R={(x, y) | 1 <= x <= 4, 0 <= y <= 2x}`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `2/3 ln(65/2)`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part b">
+                    <div class="content-wrapper">
+                        <div>`int int_R e^(y//x) \ dA`, `R={(x,y) | 0 <= y <= x^3, 1 <= x <= 2}`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `(e^4 - e - 3)/2`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part c">
+                    <div class="content-wrapper">
+                        <div>`int int_R x sqrt(y^2-x^2) \ dA`, `R={(x,y) | 0 <= x <= y, 0 <= y <= 1}`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `1/12`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part d">
+                    <div class="content-wrapper">
+                        <div>`int int_R x sin y \ dA`, `R` is bounded by `y=0`, `y=x^2`, `x=1`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `(1 - sin(1))/2`</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3 introduction">
+                Find the volume of the solid regions described below. 
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 3, part a">
+                    <div class="content-wrapper">
+                        <div>Below the plane `z=2x+y` and above the region bounded by `y=x` and `y=x^2`.</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `7/30` units³</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 3, part b">
+                    <div class="content-wrapper">
+                        <div>Below the surface `z=2xy` and above the triangle with vertices (1, 1), (3, 1), and (3,5).</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `136/3` units³</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 3, part c">
+                    <div class="content-wrapper">
+                        <div>Bounded by the cylinder `x^2+z^2=9` and the planes `3y=x`, `x=0`, `z=0` in the first octant.</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `3` units³</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 4 introduction">
+                Evaluate the integrals by reversing the order of integration: 
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 4, part a">
+                    <div class="content-wrapper">
+                        <div>`int_0^2 int_x^2 e^(y^2) dy dx`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `(e^4 - 1)/2`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Question 4, part b">
+                    <div class="content-wrapper">
+                        <div>`int_0^2 int_(y^2)^4 y cos(x^2) dx dy`</div>
+                        <div style="color: #0056b3; margin-top: 8px;"><strong>Answer:</strong> `1/4 sin(16)`</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+
+
+</main>
+</body>
+</html>

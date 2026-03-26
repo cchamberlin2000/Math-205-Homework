@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 15.1 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Screen reader only class to hide extended ARIA descriptions visually */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 15.1">
+    <h1 tabindex="0">Homework Section 15.1</h1> <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                The goal in this problem is to approximate the volume of the solid region under the surface `z=xy^2` and above the rectangle `R={(x,y) | 0 <= x <= 6, 0 <= y <= 4}`: </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a">
+                    <div class="content-wrapper">Use a Riemann sum with `m=3`, `n=2`, and use the upper right corner of each sub-rectangle as sample points. </div>
+                </li>
+                <li tabindex="0" aria-label="Question 1, part b">
+                    <div class="content-wrapper">Repeat part (a) using midpoints as your sample points. </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                The goal in this problem is to approximate the volume of the solid region under the surface `z=x^2+2y` and above the rectangle `R=[1,3] times [0,4]`. </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a">
+                    <div class="content-wrapper">Use a Riemann sum with `m=2`, `n=2`, and use the lower right corner of each sub-rectangle as sample points. </div>
+                </li>
+                <li tabindex="0" aria-label="Question 2, part b">
+                    <div class="content-wrapper">Repeat part (a) using midpoints as your sample points. </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3 introduction">
+                A table of values is given for a function `f(x,y)` defined on `R=[2,4] times [0,4]`. <table>
+                    <caption>Table of values for f(x,y)</caption> <thead>
+                        <tr>
+                            <th scope="col">x \ y</th>
+                            <th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">1</th><td>2</td><td>1</td><td>-2</td><td>-6</td><td>-5</td></tr>
+                        <tr><th scope="row">1.5</th><td>3</td><td>1</td><td>-4</td><td>-7</td><td>-6</td></tr>
+                        <tr><th scope="row">2</th><td>4</td><td>3</td><td>0</td><td>-5</td><td>-8</td></tr>
+                        <tr><th scope="row">2.5</th><td>5</td><td>5</td><td>3</td><td>-1</td><td>-4</td></tr>
+                        <tr><th scope="row">3</th><td>7</td><td>8</td><td>6</td><td>3</td><td>0</td></tr>
+                        <tr><th scope="row">3.5</th><td>8</td><td>10</td><td>7</td><td>4</td><td>1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 3, part a">
+                    <div class="content-wrapper">Estimate `int int_R f(x,y) dA` using midpoints with `m=n=2`. </div>
+                </li>
+                <li tabindex="0" aria-label="Question 3, part b">
+                    <div class="content-wrapper">Estimate the double integral with `m=2` and `n=4` by using the lower left corner of each sub-rectangle as sample points. </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 4 introduction">
+                Evaluate the double integral by first identifying it as the volume of a solid. </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 4, part a">
+                    <div class="content-wrapper">`int int_R 4 dA`, `R={(x,y) | -1 <= x <= 2, 1 <= y <= 5}` </div>
+                </li>
+                <li tabindex="0" aria-label="Question 4, part b">
+                    <div class="content-wrapper">`int int_R (6-x) dA`, `R={(x,y) | 0 <= x <= 6, 0 <= y <= 3}` </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 5">
+                <div class="content-wrapper">
+                    Rectangleopia is a small, rectangular country which measures 180 miles by 117 miles. The contour map below shows elevations in feet. Use midpoints with `m=n=2` to estimate the average elevation in Rectangleopia. <br><br>
+                    
+                    <img src="rectangleopia.png" alt="A hand-drawn topographic contour map showing a central peak at 1,000 feet, surrounded by concentric contour lines at 800 and 500 feet. Lower elevations of 100, 200, and 300 feet are labeled near the edges and corners." aria-describedby="q5-map-desc" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+                    
+                    <div id="q5-map-desc" class="sr-only">Image Description: A black-and-white topographic map with elevation labels in feet. A central circular contour represents a summit of 1,000 feet. Moving outward, concentric irregular loops are labeled 800 feet and 500 feet. The terrain slopes downward toward the edges: the top-left and bottom-left corners show elevations dropping to 200 and 100 feet; the top-right shows a 100-foot contour; and the bottom-right corner shows a 300-foot elevation contour.</div>
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW15_1Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 15.1 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>
