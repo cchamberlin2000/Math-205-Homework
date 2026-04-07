@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 15.6 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 15.6">
+    <h1 tabindex="0">Homework Section 15.6</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                Evaluate the iterated integrals:</div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a"><div class="content-wrapper">`int_(-1)^1 int_0^2 int_0^1 (xz-3y^2) dz dy dx`</div></li>
+                <li tabindex="0" aria-label="Question 1, part b"><div class="content-wrapper">`int_0^4 int_0^1 int_0^sqrt(1-z^2) z e^x dy dz dx`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Evaluate the triple integrals:</div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`int int int_Q yz sin(x^5) dV`, given `Q = {(x, y, z) | 0 <= x <= 1, 0 <= y <= x, x <= z <= 2x}`</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`int int int_Q 2xy dV`, given `Q` is the solid tetrahedron with vertices (0,0, 0), (2, 0, 0), (0, 1, 0), and (0, 0, 4).</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`int int int_Q (2x+y) dV`, given `Q` is bounded by the cylinder `y=x^2` and the planes `y=z`, `x=y`, and `z=0`.</div></li>
+                <li tabindex="0" aria-label="Question 2, part d"><div class="content-wrapper">`int int int_Q y dV`, given `Q` is bounded by the paraboloid `y=3x^2+3z^2` and the plane `y=3`.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3 introduction">
+                Use a triple integral to find the volume of the given solid:</div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 3, part a"><div class="content-wrapper">The solid enclosed by the cylinder `x=y^2` and the planes `z=0`, `z=4`, and `x=9`.</div></li>
+                <li tabindex="0" aria-label="Question 3, part b"><div class="content-wrapper">The solid surrounded by the cylinder `x^2+y^2=4` and the planes `y+z=5` and `z=1`.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 4 introduction">
+                Sketch the solid whose volume is given by the iterated integral:</div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 4, part a"><div class="content-wrapper">`int_0^1 int_0^(1-y) int_0^(3-3z) dx dz dy`</div></li>
+                <li tabindex="0" aria-label="Question 4, part b"><div class="content-wrapper">`int_0^1 int_0^(1-y) int_0^(1-y^2) dx dz dy`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 5">
+                <div class="content-wrapper">
+                    Consider the iterated integral `int_(-1)^1 int_(x^2)^1 int_0^(2-2y) f(x,y,z) dz dy dx`. Rewrite this integral as an equivalent integral in the five other orders.
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW15_6Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 15.6 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>
