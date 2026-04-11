@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 15.7 Answers - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        /* Answer highlighting */
+        .answer-text { font-weight: bold; color: #000; }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 15.7">
+    <h1 tabindex="0">Homework Section 15.7 Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Answer 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 1">
+                <div class="content-wrapper">
+                    <img src="15_7_1pic.jpg" 
+                         alt="A hand-drawn style 3D coordinate system graph plotting two points in cylindrical coordinates. The axes are labeled x (pointing down and left), y (pointing right), and z (pointing up). A blue point labeled '(2, π/6, 3)' is positioned in the first octant. A second blue point labeled '(3, 3π/4, -2)' is positioned in the lower-right area below the second quadrant of the xy-planee. Dashed arcs and radial lines are drawn on the xy-plane to indicate the radius and angle measurements sweeping from the positive x-axis." 
+                         style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 2, part a"><div class="content-wrapper answer-text">`(sqrt(3), 1, 3)`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part b"><div class="content-wrapper answer-text">`(-(3sqrt(2))/2, (3sqrt(2))/2, -2)`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 3">
+                <div class="content-wrapper answer-text">`(2, (5pi)/3, 5)`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 4</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 4, part a"><div class="content-wrapper answer-text">Circular cylinder with radius 4 and central axis the z-axis `(x^2 + y^2 = 16)`</div></li>
+                <li tabindex="0" aria-label="Answer 4, part b"><div class="content-wrapper answer-text">Half-plane `(y = sqrt(3)/3 x, x >= 0)`</div></li>
+                <li tabindex="0" aria-label="Answer 4, part c"><div class="content-wrapper answer-text">Circular cylinder with central axis on the vertical line through (0, 1, 0) `(x^2 + (y-1)^2 = 1)`</div></li>
+                <li tabindex="0" aria-label="Answer 4, part d"><div class="content-wrapper answer-text">Hyperboloid of one sheet `(x^2 + y^2 - z^2 = 1)`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 5">
+                <div class="content-wrapper">
+                    <img src="15_7_5.jpg" 
+                         alt="A hand-drawn style 3D coordinate system graph on grid paper plotting two points in spherical coordinates. The axes are labeled x (pointing down and left), y (pointing right), and z (pointing up). A black point labeled '(2, π/4, π/6)' is positioned in the first octant on the right-side area between the x, y, and z axes, with dashed lines projecting to the z-axis and down to the xy-plane. A second black point labeled '(3, 3π/2, π/4)' is positioned in the upper-left area, with a dashed arc dropping to the negative y-axis and a dashed line connecting to the z-axis." 
+                         style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 6</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 6, part a"><div class="content-wrapper answer-text">`(sqrt(2)/2, sqrt(2)/2, sqrt(3))`</div></li>
+                <li tabindex="0" aria-label="Answer 6, part b"><div class="content-wrapper answer-text">`(0, -(3sqrt(2))/2, (3sqrt(2))/2)`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 7</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 7">
+                <div class="content-wrapper answer-text">`(sqrt(5), (7pi)/4, arccos(sqrt(15)/5))`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 8</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 8, part a"><div class="content-wrapper answer-text">A sphere of radius 4 centered at the origin.</div></li>
+                <li tabindex="0" aria-label="Answer 8, part b"><div class="content-wrapper answer-text">An upward-opening half-cone with its vertex at the origin.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 9</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 9, part a"><div class="content-wrapper answer-text">Circular cylinder `(x^2 + y^2 = 16)`</div></li>
+                <li tabindex="0" aria-label="Answer 9, part b"><div class="content-wrapper answer-text">Sphere with center `(1/2, 0, 0)` and radius `1/2`: `((x - 1/2)^2 + y^2 + z^2 = 1/4)`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 10</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 10, part a">
+                    <div class="content-wrapper">
+                        <div class="answer-text">Cylindrical: `z = 2r^2`</div>
+                        <div class="answer-text" style="margin-top: 8px;">Spherical: `rho = 1/2 csc phi cot phi`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 10, part b">
+                    <div class="content-wrapper">
+                        <div class="answer-text">Cylindrical: `r^2 + z^2 = 16`</div>
+                        <div class="answer-text" style="margin-top: 8px;">Spherical: `rho = 4`</div>
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 10, part c">
+                    <div class="content-wrapper">
+                        <div class="answer-text">Cylindrical: `r = 3 sin theta`</div>
+                        <div class="answer-text" style="margin-top: 8px;">Spherical: `rho sin phi = 3 sin theta`</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</main>
+</body>
+</html>
