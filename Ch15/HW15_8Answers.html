@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 15.8 Answers - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        /* Answer highlighting */
+        .answer-text { font-weight: bold; color: #000; }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 15.8">
+    <h1 tabindex="0">Homework Section 15.8 Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Answer 1</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 1, part a">
+                    <div class="content-wrapper">
+                        <div class="answer-text">An inverted cone with its vertex at the origin, opening upwards, bounded on top by the plane `z = 3`.</div>
+                        <img src="15_8_1a.png" 
+                             alt="A hand-drawn sketch of a 3D solid. It shows an inverted yellow cone with its vertex at the origin. The top is a flat circular blue edge at z=3, with the point (0,3,3) labeled on its edge and (3,0,3) labeled on the opposite edge. The x, y, and z axes are colored red." 
+                             style="max-width: 50%; height: auto; margin-top: 15px; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 1, part b">
+                    <div class="content-wrapper">
+                        <div class="answer-text">The portion of the solid beneath the paraboloid `z = 4 - x^2 - y^2` that lies in the first octant.</div>
+                        <img src="15_8_1b.png" 
+                             alt="A hand-drawn sketch of a 3D solid in the first octant. It is a yellow quarter-paraboloid bounded by the coordinate planes. The vertex is marked (0,0,4) on the z-axis, and the base intersects the x and y axes at (2,0,0) and (0,2,0) respectively." 
+                             style="max-width: 45%; height: auto; margin-top: 15px; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    </div>
+                </li>
+                <li tabindex="0" aria-label="Answer 1, part c">
+                    <div class="content-wrapper">
+                        <div class="answer-text">A quarter of a sphere of radius 2, specifically the portion in the upper half-space (`z >= 0`) where `y >= 0`.</div>
+                        <img src="15_8_1c.png" 
+                             alt="A hand-drawn sketch of a 3D solid. It shows a yellow quarter-sphere of radius 2 in the upper half-space where y is positive. The corners are marked at (2,0,0), (0,2,0), (-2,0,0), and (0,0,2) with blue arrows pointing to them." 
+                             style="max-width: 45%; height: auto; margin-top: 15px; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 2, part a"><div class="content-wrapper answer-text">`4374/35`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part b"><div class="content-wrapper answer-text">`955/24`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part c"><div class="content-wrapper answer-text">`(64pi)/5`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 3</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 3, part a"><div class="content-wrapper answer-text">`2500pi`</div></li>
+                <li tabindex="0" aria-label="Answer 3, part b"><div class="content-wrapper answer-text">`(65pi)/16`</div></li>
+                <li tabindex="0" aria-label="Answer 3, part c"><div class="content-wrapper answer-text">`(255pi)/16`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 4">
+                <div class="content-wrapper answer-text">`4pi(sqrt(6) + sqrt(3))`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 5</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 5">
+                <div class="content-wrapper answer-text">`(2pi a^3)/9`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 6</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 6">
+                <div class="content-wrapper answer-text">`2/35`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 7</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 7">
+                <div class="content-wrapper answer-text">`(32pi)/3`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 8</span>
+            <ul class="sublist">
+                <strong>Hint: </strong>both integrals should equal the volume of a sphere of radius `a`, which is `4/3 pi a^3`
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</main>
+</body>
+</html>
