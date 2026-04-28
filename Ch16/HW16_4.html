@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16.4 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 16.4">
+    <h1 tabindex="0">Homework Section 16.4</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                Consider the line integral `int_C x^2y \ dx + xy^3 \ dy`, where `C` is the triangle with vertices (0,0), (1,0), and (1,2):
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a"><div class="content-wrapper">Evaluate the line integral directly. Note that this requires integrating over all three sides of the triangle and summing the results.</div></li>
+                <li tabindex="0" aria-label="Question 1, part b"><div class="content-wrapper">Evaluate the line integral using Green's Theorem (Note how much easier this is!!!).</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Use Green's Theorem to evaluate the line integral along `C`, which is a positively oriented curve:
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`int_C 2y e^x \ dx + e^x \ dy`, `C` is the square with sides `x=0`, `x=1`, `y=0`, and `y=1`.</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`int_C (2y + cos(x^2)) \ dx + (x + e^sqrt(y)) \ dy`, `C` is the boundary of the region enclosed by the parabolas `y=x^2` and `x=y^2`.</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`int_C (x+y) \ dx + (xy) \ dy`, `C` is the boundary of the region lying between the graphs of `x^2+y^2=1` and `x^2+y^2=4`.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3">
+                <div class="content-wrapper">
+                    Use Green's Theorem to find the work done by the force field `bb(F)(x,y) = x^2y bb(i) + y(x+y) bb(j)` in moving a particle from (0, 1) along the y-axis to the origin, then along the x-axis to (1,0), and then along the straight line segment back to (0, 1).
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 4</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 4">
+                <div class="content-wrapper">
+                    Use a line integral to find the area of the region bounded by the graphs of `y=2x+1` and `y=4-x^2`.
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW16_4Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 16.4 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>
