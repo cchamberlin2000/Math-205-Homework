@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16.7 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 16.7">
+    <h1 tabindex="0">Homework Section 16.7</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1 introduction">
+                Evaluate the surface integral.
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 1, part a"><div class="content-wrapper">`int int_S z \ dS`, `S` is the part of the plane `x+y+z=2` that lies in the first octant.</div></li>
+                <li tabindex="0" aria-label="Question 1, part b"><div class="content-wrapper">`int int_S y^2 z^2 \ dS`, `S` is the part of the cone `f(x,y)=sqrt(x^2+y^2)` that lies between the planes `z=1` and `z=4`.</div></li>
+                <li tabindex="0" aria-label="Question 1, part c"><div class="content-wrapper">`int int_S x \ dS`, `S` is the part of the paraboloid `x=y^2+z^2` that lies inside the cylinder `y^2+z^2=4` (Hint: use the rectangular form of `dS` with `x=g(y,z)`).</div></li>
+                <li tabindex="0" aria-label="Question 1, part d"><div class="content-wrapper">`int int_S (x^2+y^2+z^2) \ dS`, `S` is the part of the cylinder `x^2+y^2=4` between the planes `z=0` and `z=3`. (<strong>Hint:</strong> parameterize the cylinder and use the parametric form of `dS`).</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Evaluate the flux integral `int int_S bb(F) * bb(N) \ dS`.
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`bb(F)(x,y,z)=langle x, y, z rangle`, `S` is the part of the plane `x+y+z=2` that lies in the first octant, and has upward orientation.</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`bb(F)(x,y,z)=z bb(i) + x bb(j) + bb(k)`, `S` is part of the paraboloid `z=9-x^2-y^2` that lies above the square `0 <= x <= 1`, `0 <= y <= 1`, and has upward orientation.</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`bb(F)(x,y,z)=x bb(i) + y bb(j) + z bb(k)`, `S` is the part of the cone `z=sqrt(x^2+y^2)` between the planes `z=1` and `z=4` with downward orientation.</div></li>
+                <li tabindex="0" aria-label="Question 2, part d"><div class="content-wrapper">`bb(F)(x,y,z)=-x bb(i) + z bb(k)`, `S` consists of the paraboloid `z=f(x,y)=x^2+y^2`, `0 <= z <= 1`, and the disk `x^2+y^2 <= 1`, `z=1`. [<strong>Note:</strong> this requires evaluation of two integrals, and the paraboloid should be oriented downwards]</div></li>
+                <li tabindex="0" aria-label="Question 2, part e"><div class="content-wrapper">`bb(F)(x,y,z)=y bb(i) - x bb(j) + z bb(k)`, `S` is the part of the sphere `x^2+y^2+z^2=9` in the first octant with orientation toward the origin (<strong>Hint:</strong> use the parametric form of the flux integral).</div></li>
+            </ul>
+        </li>
+    </ol>
+
+    <a href="HW16_7Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 16.7 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>
