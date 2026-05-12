@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16.9 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 16.9">
+    <h1 tabindex="0">Homework Section 16.9</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1">
+                <div class="content-wrapper">
+                    A vector field `bb(F)` is shown. Determine whether `text(div)&thinsp;bb(F)` is positive or negative at `P_1` and `P_2` and label both points as either a source or a sink.
+                    <div style="margin-top: 15px;">
+                        <img src="16_9_1.png" 
+                             alt="A 2D coordinate plane showing a vector field. P1 is in the second quadrant, and P2 is in the fourth quadrant. Arrows generally point inward toward point P1 and decrease in length as they approach and pass P1 from the left to right, and arrows generally increase in length as they move from left to right towards P2." 
+                             style="max-width: 50%; height: 50%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Use the Divergence Theorem to calculate the flux integral, `int int_S bb(F) * bb(N) dS`
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`bb(F)(x,y,z) = zx^2 bb(i) + cos y bb(j) + e^x sin y bb(k)`, `S` is the surface of the box bounded by the planes `x=0`, `x=1`, `y=0`, `y=2`, `z=0`, and `z=1`. (Note that if you didn't use the Divergence Theorem, then you would have to sum the values of the flux integrals over all six faces of the box, a tedious calculation.)</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`bb(F)(x,y,z) = ye^z bb(i) + 3x^2y bb(j) + 3y^2z bb(k)` `S` is the surface of the solid bounded by the cylinder `x^2+y^2=1` and the planes `z=-1` and `z=2`.</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`bb(F)(x,y,z) = z bb(i) + y bb(j) + x bb(k)`, `S` is the unit sphere. (This was the last example from the 16.7 lecture. It is also Example 4, section 16.7, from Stewart's 6<sup>th</sup> Edition of Multivariable Calculus: Early Transcendentals). Note how much easier it is to calculate flux using the Divergence Theorem.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3">
+                <div class="content-wrapper">
+                    Redo problem 2(d) from section 16.7 using the Divergence Theorem.
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW16_9Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 16.9 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>
