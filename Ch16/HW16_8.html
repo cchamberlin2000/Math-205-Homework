@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16.8 - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        table { border-collapse: collapse; margin: 20px 0; width: 100%; max-width: 800px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #eee; }
+        caption { font-weight: bold; margin-bottom: 10px; text-align: left; }
+
+        .homework-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Assignment Section 16.8">
+    <h1 tabindex="0">Homework Section 16.8</h1> 
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Question 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 1">
+                <div class="content-wrapper">
+                    Use a line integral to evaluate `int int_S (text(curl)&thinsp;bb(F)) * bb(N) \ dS`, where `bb(F)(x,y,z) = -yz bb(i) + xz bb(j) + xy bb(k)` and `S` is the part of the paraboloid `z = 5 - x^2 - y^2` that lies above the plane `z = 1`, oriented upward.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 2</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 2 introduction">
+                Use the surface integral from Stokes' Theorem to evaluate `int_C bb(F) * d bb(r)`. In each case `C` is oriented counter-clockwise (as viewed from above) and bounds a surface, `S`.
+            </div>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Question 2, part a"><div class="content-wrapper">`bb(F)(x,y,z) = (x+z^2) bb(i) + (y+x^2) bb(j) + (z+y^2) bb(k)`, `C` is the triangle with vertices (1, 0, 0), (0, 1, 0) and (0, 0, 2).</div></li>
+                <li tabindex="0" aria-label="Question 2, part b"><div class="content-wrapper">`bb(F)(x,y,z) = e^y bb(i) + e^(-y) bb(j) + e^z bb(k)`, `C` is the boundary of the plane `x+3y+3z=3` in the first octant.</div></li>
+                <li tabindex="0" aria-label="Question 2, part c"><div class="content-wrapper">`bb(F)(x,y,z) = y bb(i) - x^2 bb(j) + z^2 bb(k)` and `C` is the curve of intersection of the plane `x+z=1` and the cylinder `x^2+y^2=1`.</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Question 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Question 3">
+                <div class="content-wrapper">
+                    Consider two surfaces, `S_1 : z = sqrt(1-x^2-y^2)` and `S_2 : z = 1-x^2-y^2`, bounded below by the xy-plane. Suppose `bb(F)` is a vector field over `RR^3` whose components have continuous partial derivatives. Explain why `int int_{S_1} (text(curl)&thinsp;bb(F)) * bb(N) \ dS = int int_{S_2} (text(curl)&thinsp;bb(F)) * bb(N) \ dS`.
+                </div>
+            </div>
+        </li>
+    </ol>
+
+    <a href="HW16_8Answers.html" target="_blank" rel="noopener" class="homework-button" aria-label="Open answers page for section 16.8 in a new tab">
+        View Answers
+    </a>
+
+</main>
+</body>
+</html>

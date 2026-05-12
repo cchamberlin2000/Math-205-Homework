@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16.8 Answers - Accessible Version</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'a11y/assistive-mml'] },
+            asciimath: { delimiters: [['$$', '$$'], ['`', '`']] },
+            options: { enableMenu: true }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; max-width: 900px; color: #333; }
+        
+        /* Focus styles for keyboard navigation */
+        [tabindex="0"]:focus {
+            outline: 3px solid #ffbf47;
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+
+        h1 { color: #222; padding: 5px; }
+
+        /* Main List Styling */
+        ol.main-list { padding-left: 0; list-style-type: none; }
+        
+        .question-header {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Sublist Flexbox for Alignment */
+        .sublist { 
+            list-style-type: none; 
+            padding-left: 0; 
+            counter-reset: subitem; 
+        }
+
+        .sublist li { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px;
+            counter-increment: subitem; 
+            padding: 10px;
+        }
+
+        .sublist li::before {
+            content: counter(subitem, lower-alpha) ") ";
+            font-weight: bold;
+            min-width: 30px; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .content-wrapper { flex-grow: 1; }
+
+        /* Answer highlighting */
+        .answer-text { font-weight: bold; color: #000; }
+    </style>
+</head>
+
+<body>
+<main aria-label="Calculus 3 Homework Answers Section 16.8">
+    <h1 tabindex="0">Homework Section 16.8 Answers</h1>
+
+    <ol class="main-list">
+        <li>
+            <span class="question-header" tabindex="0">Answer 1</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 1">
+                <div class="content-wrapper answer-text">`8pi`</div>
+            </div>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 2</span>
+            <ul class="sublist">
+                <li tabindex="0" aria-label="Answer 2, part a"><div class="content-wrapper answer-text">`7/3`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part b"><div class="content-wrapper answer-text">`6 - 3e`</div></li>
+                <li tabindex="0" aria-label="Answer 2, part c"><div class="content-wrapper answer-text">`-pi`</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="question-header" tabindex="0">Answer 3</span>
+            <div style="padding: 10px;" tabindex="0" aria-label="Answer 3">
+                <div class="content-wrapper">
+                    <div class="answer-text">
+                        Both surfaces have the exact same boundary curve `C` (the unit circle `x^2 + y^2 = 1` in the xy-plane, where `z = 0`). By Stokes' Theorem, the surface integral of the curl of a vector field over an oriented surface is equal to the line integral of the vector field along its boundary curve. Since both surface integrals evaluate to the identical line integral `int_C bb(F) * d bb(r)`, they must be equal to each other.
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+</main>
+</body>
+</html>
